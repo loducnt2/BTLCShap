@@ -218,6 +218,8 @@ namespace ProjectQLQuanCafe
                     MessageBox.Show("Thêm danh mục thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     txtDanhMucTenDM.Clear();
                     DanhMucLoadList();
+                    MonAnLoadList();
+                    MonAnLoadDanhMuc(cmbMonAnDanhMuc);
                 }
                 catch (Exception)
                 {
@@ -418,11 +420,10 @@ namespace ProjectQLQuanCafe
                     if (rdoTaiKhoanNam.Checked)
                         gt = true;
                     else gt = false;
-                    string password = "123456";
                     int type = 0;
                     if (cmbTaiKhoanLoaiTK.Text == "Admin")
                         type = 1;
-                    taiKhoan.insertTaiKhoan(txtTaiKhoanUsername.Text, txtTaiKhoanHoTen.Text, password, txtTaiKhoanDiaChi.Text, Convert.ToInt32(txtTaiKhoanSDT.Text), gt, type);
+                    taiKhoan.insertTaiKhoan(txtTaiKhoanUsername.Text, txtTaiKhoanHoTen.Text, txtTaiKhoanDiaChi.Text, Convert.ToInt32(txtTaiKhoanSDT.Text), gt, type);
                     MessageBox.Show("Thêm tài khoản thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     TaiKhoanLoadList();
                 }
@@ -505,8 +506,6 @@ namespace ProjectQLQuanCafe
             dtpNgayBD.Value = new DateTime(today.Year, today.Month, 1);
             dtpNgayKT.Value = dtpNgayBD.Value.AddMonths(1).AddDays(-1);
         }
-
-        
 
         // ---------- DoanhThu
 
