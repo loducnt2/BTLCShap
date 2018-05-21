@@ -1,5 +1,9 @@
 ﻿- Cái phần thanh toán của Đức có thêm cột Giá xem ở video bài 14.
-- Bảng FoodOrder thêm 2 cột là totalPrice và discount nữa!
+- Bảng FoodOrder thêm 2 cột là totalPrice và discount nữa! 
+
+-- Ngọc
+- Thêm phần không xóa được Acc đăng đăng nhập
+
 - https://github.com/loducnt2/BTLCShap
 
 

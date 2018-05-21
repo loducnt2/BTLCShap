@@ -38,6 +38,9 @@ namespace ProjectQLQuanCafe
             cmbBanAnTrangThai.Items.Add("Có người");
 
             TaiKhoanLoadList();
+            cmbTaiKhoanLoaiTK.Items.Add("Staff");
+            cmbTaiKhoanLoaiTK.Items.Add("Admin");
+
         }
 
 
@@ -404,17 +407,72 @@ namespace ProjectQLQuanCafe
 
         private void btnTaiKhoanThem_Click(object sender, EventArgs e)
         {
-
+            if (txtTaiKhoanUsername.Text==""|| txtTaiKhoanHoTen.Text==""||txtTaiKhoanDiaChi.Text==""||txtTaiKhoanSDT.Text=="")
+            {
+                MessageBox.Show("Hãy nhập đầy đủ thông tin", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            } else
+            {
+                try
+                {
+                    Boolean gt;
+                    if (rdoTaiKhoanNam.Checked)
+                        gt = true;
+                    else gt = false;
+                    string password = "123456";
+                    int type = 0;
+                    if (cmbTaiKhoanLoaiTK.Text == "Admin")
+                        type = 1;
+                    taiKhoan.insertTaiKhoan(txtTaiKhoanUsername.Text, txtTaiKhoanHoTen.Text, password, txtTaiKhoanDiaChi.Text, Convert.ToInt32(txtTaiKhoanSDT.Text), gt, type);
+                    MessageBox.Show("Thêm tài khoản thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    TaiKhoanLoadList();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Rất tiếc. Đã sảy ra lỗi khi thêm", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnTaiKhoanSua_Click(object sender, EventArgs e)
         {
-
+            if (txtTaiKhoanUsername.Text == "")
+            {
+                MessageBox.Show("Hãy nhập đầy đủ thông tin", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
+                {
+                    Boolean gt;
+                    if (rdoTaiKhoanNam.Checked)
+                        gt = true;
+                    else gt = false;
+                    int type = 0;
+                    if (cmbTaiKhoanLoaiTK.Text == "Admin")
+                        type = 1;
+                    taiKhoan.updateTaiKhoan(txtTaiKhoanUsername.Text, txtTaiKhoanHoTen.Text, txtTaiKhoanDiaChi.Text, Convert.ToInt32(txtTaiKhoanSDT.Text), gt, type);
+                    MessageBox.Show("Sửa tài khoản thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    TaiKhoanLoadList();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Rất tiếc. Đã sảy ra lỗi khi sửa", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnTaiKhoanXoa_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                taiKhoan.deleteTaiKhoan(txtTaiKhoanUsername.Text);
+                MessageBox.Show("Xóa tài khoản thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                TaiKhoanLoadList();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Rất tiếc. Đã sảy ra lỗi khi xóa", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // ---------- TaiKhoan

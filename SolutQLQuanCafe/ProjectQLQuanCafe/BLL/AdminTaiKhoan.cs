@@ -20,9 +20,22 @@ namespace ProjectQLQuanCafe.BLL
             return (dt);
         }
 
-        public void insertTaiKhoan()
+        public void insertTaiKhoan(string Username, string FullName, string Password, string address, int phone, Boolean gt, int type)
         {
-            string sql = "Insert Into Account Values ()";
+            string sql = "Insert Into Account Values (N'" + Username + "' , N'" + FullName + "', N'" + Password + "', N'" + address + "', '" + phone + "', '" + gt + "', '" + type + "')";
+            da.UnGetTable(sql);
+        }
+
+        public void updateTaiKhoan(string Username, string FullName, string address, int phone, Boolean gt, int type)
+        {
+            string sql = "Update Account Set FullName = N'" + FullName + "', address = N'" + address + "', phone = '" + phone + "', gender = '" + gt + "', TypeAccount = '" + type + "' Where Username = N'" + Username + "' ";
+            da.UnGetTable(sql);
+        }
+
+        public void deleteTaiKhoan(string Username)
+        {
+            string sql = "Delete Account Where Username = N'" + Username + "'";
+            da.UnGetTable(sql);
         }
     }
 }

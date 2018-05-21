@@ -105,6 +105,12 @@
             this.btnTaiKhoanThem = new System.Windows.Forms.Button();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvTaiKhoan = new System.Windows.Forms.DataGridView();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel10 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdoTaiKhoanNu = new System.Windows.Forms.RadioButton();
@@ -119,12 +125,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txtTaiKhoanUsername = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TypeAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabCAdmin.SuspendLayout();
             this.tabPDanhMuc.SuspendLayout();
@@ -172,7 +172,7 @@
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(993, 564);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1021, 571);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tabCAdmin
@@ -186,7 +186,7 @@
             this.tabCAdmin.Location = new System.Drawing.Point(3, 3);
             this.tabCAdmin.Name = "tabCAdmin";
             this.tabCAdmin.SelectedIndex = 0;
-            this.tabCAdmin.Size = new System.Drawing.Size(987, 558);
+            this.tabCAdmin.Size = new System.Drawing.Size(1015, 565);
             this.tabCAdmin.TabIndex = 0;
             // 
             // tabPDanhMuc
@@ -949,7 +949,7 @@
             this.tabPTaiKhoan.Location = new System.Drawing.Point(4, 27);
             this.tabPTaiKhoan.Name = "tabPTaiKhoan";
             this.tabPTaiKhoan.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPTaiKhoan.Size = new System.Drawing.Size(979, 527);
+            this.tabPTaiKhoan.Size = new System.Drawing.Size(1007, 534);
             this.tabPTaiKhoan.TabIndex = 4;
             this.tabPTaiKhoan.Text = "Tài khoản";
             this.tabPTaiKhoan.UseVisualStyleBackColor = true;
@@ -967,7 +967,7 @@
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.16327F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.83673F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(973, 521);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(1001, 528);
             this.tableLayoutPanel9.TabIndex = 0;
             // 
             // panel9
@@ -977,9 +977,9 @@
             this.panel9.Controls.Add(this.btnTaiKhoanSua);
             this.panel9.Controls.Add(this.btnTaiKhoanThem);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(3, 462);
+            this.panel9.Location = new System.Drawing.Point(3, 468);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(967, 56);
+            this.panel9.Size = new System.Drawing.Size(995, 57);
             this.panel9.TabIndex = 1;
             // 
             // btnTaiKhoanXem
@@ -987,9 +987,9 @@
             this.btnTaiKhoanXem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTaiKhoanXem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiKhoanXem.Location = new System.Drawing.Point(877, 6);
+            this.btnTaiKhoanXem.Location = new System.Drawing.Point(905, 6);
             this.btnTaiKhoanXem.Name = "btnTaiKhoanXem";
-            this.btnTaiKhoanXem.Size = new System.Drawing.Size(87, 46);
+            this.btnTaiKhoanXem.Size = new System.Drawing.Size(87, 47);
             this.btnTaiKhoanXem.TabIndex = 3;
             this.btnTaiKhoanXem.Text = "Xem";
             this.btnTaiKhoanXem.UseVisualStyleBackColor = true;
@@ -1000,9 +1000,9 @@
             this.btnTaiKhoanXoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTaiKhoanXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiKhoanXoa.Location = new System.Drawing.Point(784, 6);
+            this.btnTaiKhoanXoa.Location = new System.Drawing.Point(812, 6);
             this.btnTaiKhoanXoa.Name = "btnTaiKhoanXoa";
-            this.btnTaiKhoanXoa.Size = new System.Drawing.Size(87, 46);
+            this.btnTaiKhoanXoa.Size = new System.Drawing.Size(87, 47);
             this.btnTaiKhoanXoa.TabIndex = 2;
             this.btnTaiKhoanXoa.Text = "Xóa";
             this.btnTaiKhoanXoa.UseVisualStyleBackColor = true;
@@ -1013,9 +1013,9 @@
             this.btnTaiKhoanSua.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTaiKhoanSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiKhoanSua.Location = new System.Drawing.Point(691, 6);
+            this.btnTaiKhoanSua.Location = new System.Drawing.Point(719, 6);
             this.btnTaiKhoanSua.Name = "btnTaiKhoanSua";
-            this.btnTaiKhoanSua.Size = new System.Drawing.Size(87, 46);
+            this.btnTaiKhoanSua.Size = new System.Drawing.Size(87, 47);
             this.btnTaiKhoanSua.TabIndex = 1;
             this.btnTaiKhoanSua.Text = "Sửa";
             this.btnTaiKhoanSua.UseVisualStyleBackColor = true;
@@ -1026,9 +1026,9 @@
             this.btnTaiKhoanThem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTaiKhoanThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiKhoanThem.Location = new System.Drawing.Point(598, 6);
+            this.btnTaiKhoanThem.Location = new System.Drawing.Point(626, 6);
             this.btnTaiKhoanThem.Name = "btnTaiKhoanThem";
-            this.btnTaiKhoanThem.Size = new System.Drawing.Size(87, 46);
+            this.btnTaiKhoanThem.Size = new System.Drawing.Size(87, 47);
             this.btnTaiKhoanThem.TabIndex = 0;
             this.btnTaiKhoanThem.Text = "Thêm";
             this.btnTaiKhoanThem.UseVisualStyleBackColor = true;
@@ -1047,7 +1047,7 @@
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(967, 453);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(995, 459);
             this.tableLayoutPanel10.TabIndex = 0;
             // 
             // dgvTaiKhoan
@@ -1064,9 +1064,45 @@
             this.dgvTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTaiKhoan.Location = new System.Drawing.Point(3, 3);
             this.dgvTaiKhoan.Name = "dgvTaiKhoan";
-            this.dgvTaiKhoan.Size = new System.Drawing.Size(655, 447);
+            this.dgvTaiKhoan.Size = new System.Drawing.Size(674, 453);
             this.dgvTaiKhoan.TabIndex = 0;
             this.dgvTaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTaiKhoan_CellClick);
+            // 
+            // Username
+            // 
+            this.Username.DataPropertyName = "Username";
+            this.Username.HeaderText = "Username";
+            this.Username.Name = "Username";
+            // 
+            // HoTen
+            // 
+            this.HoTen.DataPropertyName = "FullName";
+            this.HoTen.HeaderText = "Họ tên";
+            this.HoTen.Name = "HoTen";
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "address";
+            this.DiaChi.HeaderText = "Địa chỉ";
+            this.DiaChi.Name = "DiaChi";
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "phone";
+            this.SDT.HeaderText = "SĐT";
+            this.SDT.Name = "SDT";
+            // 
+            // GioiTinh
+            // 
+            this.GioiTinh.DataPropertyName = "gender";
+            this.GioiTinh.HeaderText = "Giới tính";
+            this.GioiTinh.Name = "GioiTinh";
+            // 
+            // TypeAccount
+            // 
+            this.TypeAccount.DataPropertyName = "TypeAccount";
+            this.TypeAccount.HeaderText = "TypeAccount";
+            this.TypeAccount.Name = "TypeAccount";
             // 
             // panel10
             // 
@@ -1082,9 +1118,9 @@
             this.panel10.Controls.Add(this.txtTaiKhoanUsername);
             this.panel10.Controls.Add(this.label16);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(664, 3);
+            this.panel10.Location = new System.Drawing.Point(683, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(300, 447);
+            this.panel10.Size = new System.Drawing.Size(309, 453);
             this.panel10.TabIndex = 1;
             // 
             // groupBox1
@@ -1128,7 +1164,7 @@
             this.cmbTaiKhoanLoaiTK.FormattingEnabled = true;
             this.cmbTaiKhoanLoaiTK.Location = new System.Drawing.Point(126, 346);
             this.cmbTaiKhoanLoaiTK.Name = "cmbTaiKhoanLoaiTK";
-            this.cmbTaiKhoanLoaiTK.Size = new System.Drawing.Size(161, 26);
+            this.cmbTaiKhoanLoaiTK.Size = new System.Drawing.Size(170, 26);
             this.cmbTaiKhoanLoaiTK.TabIndex = 12;
             // 
             // label18
@@ -1167,7 +1203,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTaiKhoanSDT.Location = new System.Drawing.Point(126, 217);
             this.txtTaiKhoanSDT.Name = "txtTaiKhoanSDT";
-            this.txtTaiKhoanSDT.Size = new System.Drawing.Size(161, 24);
+            this.txtTaiKhoanSDT.Size = new System.Drawing.Size(170, 24);
             this.txtTaiKhoanSDT.TabIndex = 9;
             // 
             // txtTaiKhoanDiaChi
@@ -1176,7 +1212,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTaiKhoanDiaChi.Location = new System.Drawing.Point(126, 169);
             this.txtTaiKhoanDiaChi.Name = "txtTaiKhoanDiaChi";
-            this.txtTaiKhoanDiaChi.Size = new System.Drawing.Size(161, 24);
+            this.txtTaiKhoanDiaChi.Size = new System.Drawing.Size(170, 24);
             this.txtTaiKhoanDiaChi.TabIndex = 7;
             // 
             // txtTaiKhoanHoTen
@@ -1185,7 +1221,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTaiKhoanHoTen.Location = new System.Drawing.Point(126, 119);
             this.txtTaiKhoanHoTen.Name = "txtTaiKhoanHoTen";
-            this.txtTaiKhoanHoTen.Size = new System.Drawing.Size(161, 24);
+            this.txtTaiKhoanHoTen.Size = new System.Drawing.Size(170, 24);
             this.txtTaiKhoanHoTen.TabIndex = 3;
             // 
             // label15
@@ -1204,8 +1240,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTaiKhoanUsername.Location = new System.Drawing.Point(126, 69);
             this.txtTaiKhoanUsername.Name = "txtTaiKhoanUsername";
-            this.txtTaiKhoanUsername.ReadOnly = true;
-            this.txtTaiKhoanUsername.Size = new System.Drawing.Size(161, 24);
+            this.txtTaiKhoanUsername.Size = new System.Drawing.Size(170, 24);
             this.txtTaiKhoanUsername.TabIndex = 1;
             // 
             // label16
@@ -1218,47 +1253,11 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "Username";
             // 
-            // Username
-            // 
-            this.Username.DataPropertyName = "Username";
-            this.Username.HeaderText = "Username";
-            this.Username.Name = "Username";
-            // 
-            // HoTen
-            // 
-            this.HoTen.DataPropertyName = "FullName";
-            this.HoTen.HeaderText = "Họ tên";
-            this.HoTen.Name = "HoTen";
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "address";
-            this.DiaChi.HeaderText = "Địa chỉ";
-            this.DiaChi.Name = "DiaChi";
-            // 
-            // SDT
-            // 
-            this.SDT.DataPropertyName = "phone";
-            this.SDT.HeaderText = "SĐT";
-            this.SDT.Name = "SDT";
-            // 
-            // GioiTinh
-            // 
-            this.GioiTinh.DataPropertyName = "gender";
-            this.GioiTinh.HeaderText = "Giới tính";
-            this.GioiTinh.Name = "GioiTinh";
-            // 
-            // TypeAccount
-            // 
-            this.TypeAccount.DataPropertyName = "TypeAccount";
-            this.TypeAccount.HeaderText = "TypeAccount";
-            this.TypeAccount.Name = "TypeAccount";
-            // 
             // fAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(993, 564);
+            this.ClientSize = new System.Drawing.Size(1021, 571);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
