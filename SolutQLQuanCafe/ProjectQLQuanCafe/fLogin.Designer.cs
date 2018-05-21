@@ -87,6 +87,7 @@
             // 
             // btnDangNhap
             // 
+            this.btnDangNhap.Image = global::ProjectQLQuanCafe.Properties.Resources.iphone_x;
             this.btnDangNhap.Location = new System.Drawing.Point(170, 139);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(127, 33);

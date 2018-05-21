@@ -65,3 +65,16 @@ D:\Nam 3\C#\BTLCShap\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCa
 D:\Nam 3\C#\BTLCShap\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.fQuanLyDatMon.resources
 D:\Nam 3\C#\BTLCShap\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.Properties.Resources.resources
 D:\Nam 3\C#\BTLCShap\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.csproj.GenerateResource.Cache
+D:\C# btl\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\bin\Debug\ProjectQLQuanCafe.exe.config
+D:\C# btl\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\bin\Debug\ProjectQLQuanCafe.exe
+D:\C# btl\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\bin\Debug\ProjectQLQuanCafe.pdb
+D:\C# btl\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.csprojResolveAssemblyReference.cache
+D:\C# btl\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.fAccount.resources
+D:\C# btl\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.fAdmin.resources
+D:\C# btl\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.fLogin.resources
+D:\C# btl\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.fQuanLyDatMon.resources
+D:\C# btl\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.Properties.Resources.resources
+D:\C# btl\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.csproj.GenerateResource.Cache
+D:\C# btl\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.csproj.CoreCompileInputs.cache
+D:\C# btl\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.exe
+D:\C# btl\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.pdb
