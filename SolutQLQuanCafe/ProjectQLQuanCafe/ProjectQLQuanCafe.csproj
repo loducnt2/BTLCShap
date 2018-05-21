@@ -46,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\AdminBanAn.cs" />
     <Compile Include="BLL\AdminDanhMuc.cs" />
     <Compile Include="BLL\AdminMonAn.cs" />
+    <Compile Include="BLL\AdminTaiKhoan.cs" />
     <Compile Include="BLL\Category.cs" />
     <Compile Include="BLL\OrderDetail.cs" />
     <Compile Include="DAL\DataProvider.cs" />

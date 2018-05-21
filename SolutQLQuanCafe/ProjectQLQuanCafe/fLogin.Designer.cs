@@ -76,7 +76,6 @@
             // btnThoat
             // 
             this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnThoat.Image = global::ProjectQLQuanCafe.Properties.Resources.iphone_x;
             this.btnThoat.Location = new System.Drawing.Point(360, 139);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(119, 33);
@@ -87,7 +86,6 @@
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Image = global::ProjectQLQuanCafe.Properties.Resources.iphone_x;
             this.btnDangNhap.Location = new System.Drawing.Point(170, 139);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(127, 33);

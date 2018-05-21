@@ -1,3 +1,0 @@
-# BTLCShap
-ABCDEF
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

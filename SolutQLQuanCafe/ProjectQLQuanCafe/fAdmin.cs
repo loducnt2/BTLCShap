@@ -33,8 +33,11 @@ namespace ProjectQLQuanCafe
 
             DanhMucLoadList();
 
-            LoadBanAn();
-            LoadTaiKhoan();
+            BanAnLoadList();
+            cmbBanAnTrangThai.Items.Add("Trống");
+            cmbBanAnTrangThai.Items.Add("Có người");
+
+            TaiKhoanLoadList();
         }
 
 
@@ -44,6 +47,7 @@ namespace ProjectQLQuanCafe
         private void btnMonAnXem_Click(object sender, EventArgs e)
         {
             MonAnLoadList();
+            MonAnLoadDanhMuc(cmbMonAnDanhMuc);
         }
         void MonAnLoadList()
         {
@@ -83,7 +87,7 @@ namespace ProjectQLQuanCafe
                 //MessageBox.Show("Rất tiếc. Đã sảy ra lỗi khi Click!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        void ResetTextBox()
+        void ResetTextBoxMonAn()
         {
             txtMonAnTenMon.Focus();
             txtMonAnTenMon.Clear();
@@ -104,9 +108,10 @@ namespace ProjectQLQuanCafe
                     
                     DataRow dr = dt.Rows[0];
                     idFoodCategory = Convert.ToInt32(dr[0].ToString());
+
                     monAn.insertMonAn(txtMonAnTenMon.Text, Convert.ToInt32(numMonAnGia.Text), idFoodCategory);
                     MessageBox.Show("Thêm món ăn thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    ResetTextBox();
+                    ResetTextBoxMonAn();
                     MonAnLoadList();
                 }
                 catch (Exception)
@@ -231,6 +236,8 @@ namespace ProjectQLQuanCafe
                     danhMuc.updateDanhMuc(txtDanhMucID.Text, txtDanhMucTenDM.Text);
                     MessageBox.Show("Sửa danh mục thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     DanhMucLoadList();
+                    MonAnLoadList();
+                    MonAnLoadDanhMuc(cmbMonAnDanhMuc);
                 }
                 catch (Exception)
                 {
@@ -246,17 +253,14 @@ namespace ProjectQLQuanCafe
                 danhMuc.deleteDanhMuc(txtDanhMucID.Text);
                 MessageBox.Show("Xóa danh mục thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 DanhMucLoadList();
+                MonAnLoadList();
+                MonAnLoadDanhMuc(cmbMonAnDanhMuc);
             }
             catch (Exception)
             {
                 MessageBox.Show("Rất tiếc. Đã sảy ra lỗi khi xóa", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-
-
-
         // ---------- DanhMuc
 
 
@@ -264,26 +268,154 @@ namespace ProjectQLQuanCafe
 
 
         // ---------- BanAn
-        void LoadBanAn()
+        AdminBanAn banAn = new AdminBanAn();
+        void BanAnLoadList()
         {
-            string cmdText = "Select * From FoodTable";
-            DataProvider dp = new DataProvider();
-            dgvBanAn.DataSource = dp.ExecuteQuery(cmdText);
+            DataTable dt = new DataTable();
+            dt = banAn.GetListBanAn();
+            dgvBanAn.DataSource = dt;
+        }
+        private void btnBanAnXem_Click(object sender, EventArgs e)
+        {
+            BanAnLoadList();
+        }
+        private void dgvBanAn_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            vt = e.RowIndex;
+            try
+            {
+                if (vt >= 0)
+                {
+                    txtBanAnID.Text = dgvBanAn.Rows[vt].Cells[0].Value.ToString();
+                    txtBanAnTenBan.Text = dgvBanAn.Rows[vt].Cells[1].Value.ToString();
+                    cmbBanAnTrangThai.Text = dgvBanAn.Rows[vt].Cells[2].Value.ToString();
+                }
+            }
+            catch (Exception) { }
+        }
+        private void btnBanAnThem_Click(object sender, EventArgs e)
+        {
+            if (txtBanAnTenBan.Text == "")
+            {
+                MessageBox.Show("Hãy nhập đầy đủ thông tin", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
+                {
+                    banAn.insertBanAn(txtBanAnTenBan.Text, cmbBanAnTrangThai.Text);
+                    MessageBox.Show("Thêm bàn ăn thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    txtBanAnTenBan.Clear();
+                    BanAnLoadList();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Rất tiếc. Đã sảy ra lỗi khi thêm", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
+        private void btnBanAnSua_Click(object sender, EventArgs e)
+        {
+            if (txtBanAnTenBan.Text == "")
+            {
+                MessageBox.Show("Hãy nhập đầy đủ thông tin", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
+                {
+                    banAn.updateBanAn(txtBanAnID.Text, txtBanAnTenBan.Text, cmbBanAnTrangThai.Text);
+                    MessageBox.Show("Sửa bàn ăn thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    BanAnLoadList();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Rất tiếc. Đã sảy ra lỗi khi sửa", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
 
+        private void btnBanAnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                banAn.deleteBanAn(txtBanAnID.Text);
+                MessageBox.Show("Xóa bàn ăn thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                BanAnLoadList();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Rất tiếc. Đã sảy ra lỗi khi xóa", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         // ---------- BanAn
 
 
 
+
+
         // ---------- TaiKhoan
-        void LoadTaiKhoan()
+        AdminTaiKhoan taiKhoan = new AdminTaiKhoan();
+        void TaiKhoanLoadList()
         {
-            string cmdText = "Select * From Account";
-            DataProvider dp = new DataProvider();
-            dgvTaiKhoan.DataSource = dp.ExecuteQuery(cmdText);
+            DataTable dt = new DataTable();
+            dt = taiKhoan.GetListTaiKhoan();
+            dgvTaiKhoan.DataSource = dt;
         }
 
+        private void dgvTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            vt = e.RowIndex;
+            try
+            {
+                if (vt >= 0)
+                {
+                    txtTaiKhoanUsername.Text = dgvTaiKhoan.Rows[vt].Cells[0].Value.ToString();
+                    txtTaiKhoanHoTen.Text = dgvTaiKhoan.Rows[vt].Cells[1].Value.ToString();
+                    txtTaiKhoanDiaChi.Text = dgvTaiKhoan.Rows[vt].Cells[2].Value.ToString();
+                    txtTaiKhoanSDT.Text = dgvTaiKhoan.Rows[vt].Cells[3].Value.ToString();
+                    if (Boolean.Parse(dgvTaiKhoan.Rows[vt].Cells[4].Value.ToString()) == true)
+                        rdoTaiKhoanNam.Checked = true;
+                    else rdoTaiKhoanNu.Checked = true;
+                    if (Convert.ToInt32(dgvTaiKhoan.Rows[vt].Cells[5].Value.ToString()) == 1)
+                        cmbTaiKhoanLoaiTK.Text = "Admin";
+                    else cmbTaiKhoanLoaiTK.Text = "Staff";
+                }
+            }
+            catch (Exception)
+            {
+                //MessageBox.Show("Rất tiếc. Đã sảy ra lỗi khi Click!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        void ResetTextBoxTaiKhoan()
+        {
+            txtTaiKhoanHoTen.Focus();
+            txtTaiKhoanHoTen.Clear();
+            txtTaiKhoanDiaChi.Clear();
+            txtTaiKhoanSDT.Clear();
+            cmbTaiKhoanLoaiTK.Text = "Staff";
+        }
+
+        private void btnTaiKhoanXem_Click(object sender, EventArgs e)
+        {
+            TaiKhoanLoadList();
+        }
+
+        private void btnTaiKhoanThem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTaiKhoanSua_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTaiKhoanXoa_Click(object sender, EventArgs e)
+        {
+
+        }
 
         // ---------- TaiKhoan
 
@@ -316,15 +448,13 @@ namespace ProjectQLQuanCafe
             dtpNgayKT.Value = dtpNgayBD.Value.AddMonths(1).AddDays(-1);
         }
 
- 
-
-
-
-
-
-
+        
 
         // ---------- DoanhThu
+
+
+
+
 
     }
 }
