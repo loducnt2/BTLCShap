@@ -2,7 +2,7 @@
 - Bảng FoodOrder thêm 2 cột là totalPrice và discount nữa! 
 
 -- Ngọc
-- Thêm phần không xóa được Acc đăng đăng nhập
+- Thêm phần không xóa được Acc đang đăng nhập 
 
 - https://github.com/loducnt2/BTLCShap
 
