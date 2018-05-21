@@ -1,0 +1,13 @@
+- Cái phần thanh toán của Đức có thêm cột Giá xem ở video bài 14.
+- Bảng FoodOrder thêm 2 cột là totalPrice và discount nữa!
+
+- git init
+- git remote add origin https://github.com/loducnt2/BTLCShap.git
+- git pull origin master
+
+- git init
+- git status
+- git add .
+- git commit -m "......."
+- git pull origin master
+- git push origin master
