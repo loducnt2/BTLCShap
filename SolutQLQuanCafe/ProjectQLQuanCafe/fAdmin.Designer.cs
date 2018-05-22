@@ -233,7 +233,7 @@
             this.btnDanhMucXem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDanhMucXem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDanhMucXem.Location = new System.Drawing.Point(905, 6);
+            this.btnDanhMucXem.Location = new System.Drawing.Point(900, 6);
             this.btnDanhMucXem.Name = "btnDanhMucXem";
             this.btnDanhMucXem.Size = new System.Drawing.Size(87, 47);
             this.btnDanhMucXem.TabIndex = 3;
@@ -246,7 +246,7 @@
             this.btnDanhMucXoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDanhMucXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDanhMucXoa.Location = new System.Drawing.Point(812, 6);
+            this.btnDanhMucXoa.Location = new System.Drawing.Point(797, 6);
             this.btnDanhMucXoa.Name = "btnDanhMucXoa";
             this.btnDanhMucXoa.Size = new System.Drawing.Size(87, 47);
             this.btnDanhMucXoa.TabIndex = 2;
@@ -259,7 +259,7 @@
             this.btnDanhMucSua.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDanhMucSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDanhMucSua.Location = new System.Drawing.Point(719, 6);
+            this.btnDanhMucSua.Location = new System.Drawing.Point(689, 6);
             this.btnDanhMucSua.Name = "btnDanhMucSua";
             this.btnDanhMucSua.Size = new System.Drawing.Size(87, 47);
             this.btnDanhMucSua.TabIndex = 1;
@@ -272,7 +272,7 @@
             this.btnDanhMucThem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDanhMucThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDanhMucThem.Location = new System.Drawing.Point(626, 6);
+            this.btnDanhMucThem.Location = new System.Drawing.Point(586, 6);
             this.btnDanhMucThem.Name = "btnDanhMucThem";
             this.btnDanhMucThem.Size = new System.Drawing.Size(87, 47);
             this.btnDanhMucThem.TabIndex = 0;
@@ -417,7 +417,7 @@
             this.btnMonAnXem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMonAnXem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMonAnXem.Location = new System.Drawing.Point(905, 6);
+            this.btnMonAnXem.Location = new System.Drawing.Point(900, 6);
             this.btnMonAnXem.Name = "btnMonAnXem";
             this.btnMonAnXem.Size = new System.Drawing.Size(87, 47);
             this.btnMonAnXem.TabIndex = 3;
@@ -430,7 +430,7 @@
             this.btnMonAnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMonAnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMonAnXoa.Location = new System.Drawing.Point(812, 6);
+            this.btnMonAnXoa.Location = new System.Drawing.Point(797, 6);
             this.btnMonAnXoa.Name = "btnMonAnXoa";
             this.btnMonAnXoa.Size = new System.Drawing.Size(87, 47);
             this.btnMonAnXoa.TabIndex = 2;
@@ -443,7 +443,7 @@
             this.btnMonAnSua.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMonAnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMonAnSua.Location = new System.Drawing.Point(719, 6);
+            this.btnMonAnSua.Location = new System.Drawing.Point(689, 6);
             this.btnMonAnSua.Name = "btnMonAnSua";
             this.btnMonAnSua.Size = new System.Drawing.Size(87, 47);
             this.btnMonAnSua.TabIndex = 1;
@@ -456,7 +456,7 @@
             this.btnMonAnThem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMonAnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMonAnThem.Location = new System.Drawing.Point(626, 6);
+            this.btnMonAnThem.Location = new System.Drawing.Point(586, 6);
             this.btnMonAnThem.Name = "btnMonAnThem";
             this.btnMonAnThem.Size = new System.Drawing.Size(87, 47);
             this.btnMonAnThem.TabIndex = 0;
@@ -657,7 +657,7 @@
             this.btnBanAnXem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBanAnXem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBanAnXem.Location = new System.Drawing.Point(905, 5);
+            this.btnBanAnXem.Location = new System.Drawing.Point(900, 5);
             this.btnBanAnXem.Name = "btnBanAnXem";
             this.btnBanAnXem.Size = new System.Drawing.Size(87, 47);
             this.btnBanAnXem.TabIndex = 3;
@@ -670,7 +670,7 @@
             this.btnBanAnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBanAnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBanAnXoa.Location = new System.Drawing.Point(812, 5);
+            this.btnBanAnXoa.Location = new System.Drawing.Point(797, 5);
             this.btnBanAnXoa.Name = "btnBanAnXoa";
             this.btnBanAnXoa.Size = new System.Drawing.Size(87, 47);
             this.btnBanAnXoa.TabIndex = 2;
@@ -683,7 +683,7 @@
             this.btnBanAnSua.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBanAnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBanAnSua.Location = new System.Drawing.Point(719, 5);
+            this.btnBanAnSua.Location = new System.Drawing.Point(689, 5);
             this.btnBanAnSua.Name = "btnBanAnSua";
             this.btnBanAnSua.Size = new System.Drawing.Size(87, 47);
             this.btnBanAnSua.TabIndex = 1;
@@ -696,7 +696,7 @@
             this.btnBanAnThem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBanAnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBanAnThem.Location = new System.Drawing.Point(626, 5);
+            this.btnBanAnThem.Location = new System.Drawing.Point(586, 5);
             this.btnBanAnThem.Name = "btnBanAnThem";
             this.btnBanAnThem.Size = new System.Drawing.Size(87, 47);
             this.btnBanAnThem.TabIndex = 0;
@@ -988,7 +988,7 @@
             this.btnTaiKhoanXem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTaiKhoanXem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiKhoanXem.Location = new System.Drawing.Point(905, 6);
+            this.btnTaiKhoanXem.Location = new System.Drawing.Point(900, 6);
             this.btnTaiKhoanXem.Name = "btnTaiKhoanXem";
             this.btnTaiKhoanXem.Size = new System.Drawing.Size(87, 47);
             this.btnTaiKhoanXem.TabIndex = 3;
@@ -1001,7 +1001,7 @@
             this.btnTaiKhoanXoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTaiKhoanXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiKhoanXoa.Location = new System.Drawing.Point(812, 6);
+            this.btnTaiKhoanXoa.Location = new System.Drawing.Point(797, 6);
             this.btnTaiKhoanXoa.Name = "btnTaiKhoanXoa";
             this.btnTaiKhoanXoa.Size = new System.Drawing.Size(87, 47);
             this.btnTaiKhoanXoa.TabIndex = 2;
@@ -1014,7 +1014,7 @@
             this.btnTaiKhoanSua.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTaiKhoanSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiKhoanSua.Location = new System.Drawing.Point(719, 6);
+            this.btnTaiKhoanSua.Location = new System.Drawing.Point(689, 6);
             this.btnTaiKhoanSua.Name = "btnTaiKhoanSua";
             this.btnTaiKhoanSua.Size = new System.Drawing.Size(87, 47);
             this.btnTaiKhoanSua.TabIndex = 1;
@@ -1027,7 +1027,7 @@
             this.btnTaiKhoanThem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTaiKhoanThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiKhoanThem.Location = new System.Drawing.Point(626, 6);
+            this.btnTaiKhoanThem.Location = new System.Drawing.Point(586, 6);
             this.btnTaiKhoanThem.Name = "btnTaiKhoanThem";
             this.btnTaiKhoanThem.Size = new System.Drawing.Size(87, 47);
             this.btnTaiKhoanThem.TabIndex = 0;
@@ -1265,6 +1265,7 @@
             this.Name = "fAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Control Panel";
+            this.Load += new System.EventHandler(this.fAdmin_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tabCAdmin.ResumeLayout(false);
             this.tabPDanhMuc.ResumeLayout(false);
