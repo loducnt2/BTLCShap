@@ -499,7 +499,7 @@ namespace ProjectQLQuanCafe
             dtpNgayBD.Value = new DateTime(today.Year, today.Month, 1);
             dtpNgayKT.Value = dtpNgayBD.Value.AddMonths(1).AddDays(-1);
         }
-        
+
 
 
 
