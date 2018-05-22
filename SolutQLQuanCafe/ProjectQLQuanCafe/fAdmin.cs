@@ -15,20 +15,18 @@ namespace ProjectQLQuanCafe
 {
     public partial class fAdmin : Form
     {
-        //BindingSource foodList = new BindingSource();
         public fAdmin()
         {
             InitializeComponent();
             LoadAllData();
         }
+
         private void LoadAllData()
         {
             DoanhThuLoadDateTimePicker();
             DoanhThuLoadList(dtpNgayBD.Value, dtpNgayKT.Value);
             
             MonAnLoadList();
-            //dgvMonAn.DataSource = foodList;
-            //MonAnClickDataBinding();
             MonAnLoadDanhMuc(cmbMonAnDanhMuc);
 
             DanhMucLoadList();
@@ -63,14 +61,7 @@ namespace ProjectQLQuanCafe
             cmb.DataSource = danhMuc.GetListdanhMuc();
             cmb.DisplayMember = "Name";
         }
-        // Click DataGridView: DataBinding
-        //void MonAnClickDataBinding()
-        //{
-        //    txtMonAnID.DataBindings.Add(new Binding("Text", dgvMonAn.DataSource, "Mã món", true, DataSourceUpdateMode.Never));
-        //    txtMonAnTenMon.DataBindings.Add(new Binding("Text", dgvMonAn.DataSource, "Tên món", true, DataSourceUpdateMode.Never));
-        //    numMonAnGia.DataBindings.Add(new Binding("Value", dgvMonAn.DataSource, "Giá", true, DataSourceUpdateMode.Never));
-        //    cmbMonAnDanhMuc.DataBindings.Add(new Binding("Text", dgvMonAn.DataSource, "Tên danh mục", true, DataSourceUpdateMode.Never));
-        //}
+
         int vt = 0;
         private void dgvMonAn_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -425,6 +416,7 @@ namespace ProjectQLQuanCafe
                         type = 1;
                     taiKhoan.insertTaiKhoan(txtTaiKhoanUsername.Text, txtTaiKhoanHoTen.Text, txtTaiKhoanDiaChi.Text, Convert.ToInt32(txtTaiKhoanSDT.Text), gt, type);
                     MessageBox.Show("Thêm tài khoản thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    ResetTextBoxTaiKhoan();
                     TaiKhoanLoadList();
                 }
                 catch (Exception)
@@ -497,15 +489,19 @@ namespace ProjectQLQuanCafe
             }
             catch (Exception)
             {
-                MessageBox.Show("Rất tiếc. Đã sẩy ra lỗi gì đó!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Rất tiếc. Đã sảy ra lỗi gì đó!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         void DoanhThuLoadDateTimePicker()
         {
+            // Set dateTimePicker từ đầu tháng đến cuối tháng
             DateTime today = DateTime.Now;
             dtpNgayBD.Value = new DateTime(today.Year, today.Month, 1);
             dtpNgayKT.Value = dtpNgayBD.Value.AddMonths(1).AddDays(-1);
         }
+        
+
+
 
         // ---------- DoanhThu
 

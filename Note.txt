@@ -1,5 +1,6 @@
 ﻿- Cái phần thanh toán của Đức có thêm cột Giá xem ở video bài 14.
 - Bảng FoodOrder thêm 2 cột là totalPrice và discount nữa! 
+- Form login còm phần mà hóa mật khẩu ở video 22
 
 -- Ngọc
 - Thêm phần không xóa được Acc đang đăng nhập 
@@ -20,3 +21,7 @@
 - git commit -m "tso dus filr..."
 - git pull origin master
 - git push origin master
+
+
+
+
