@@ -183,7 +183,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(22, 216);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(248, 53);
+            this.groupBox1.Size = new System.Drawing.Size(454, 53);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Giới tính";
@@ -191,7 +191,7 @@
             // rdoNu
             // 
             this.rdoNu.AutoSize = true;
-            this.rdoNu.Location = new System.Drawing.Point(152, 25);
+            this.rdoNu.Location = new System.Drawing.Point(344, 19);
             this.rdoNu.Name = "rdoNu";
             this.rdoNu.Size = new System.Drawing.Size(47, 22);
             this.rdoNu.TabIndex = 6;
@@ -203,7 +203,7 @@
             // rdoNam
             // 
             this.rdoNam.AutoSize = true;
-            this.rdoNam.Location = new System.Drawing.Point(37, 25);
+            this.rdoNam.Location = new System.Drawing.Point(172, 19);
             this.rdoNam.Name = "rdoNam";
             this.rdoNam.Size = new System.Drawing.Size(61, 22);
             this.rdoNam.TabIndex = 5;
@@ -340,6 +340,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "fAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
