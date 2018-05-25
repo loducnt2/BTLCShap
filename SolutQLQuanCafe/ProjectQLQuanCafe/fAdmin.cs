@@ -18,13 +18,11 @@ namespace ProjectQLQuanCafe
         public fAdmin()
         {
             InitializeComponent();
-            LoadAllData();
         }
         private void fAdmin_Load(object sender, EventArgs e)
         {
-
+            LoadAllData();
         }
-
         private void LoadAllData()
         {
             DoanhThuLoadDateTimePicker();
@@ -177,8 +175,6 @@ namespace ProjectQLQuanCafe
         // ---------- MonAn
 
 
-
-
         // ---------- DanhMuc
         AdminDanhMuc danhMuc = new AdminDanhMuc();
         private void btnDanhMucXem_Click(object sender, EventArgs e)
@@ -278,8 +274,6 @@ namespace ProjectQLQuanCafe
 
 
 
-
-
         // ---------- BanAn
         AdminBanAn banAn = new AdminBanAn();
         void BanAnLoadList()
@@ -369,9 +363,6 @@ namespace ProjectQLQuanCafe
             }
         }
         // ---------- BanAn
-
-
-
 
 
         // ---------- TaiKhoan
@@ -529,15 +520,14 @@ namespace ProjectQLQuanCafe
             dtpNgayBD.Value = new DateTime(today.Year, today.Month, 1);
             dtpNgayKT.Value = dtpNgayBD.Value.AddMonths(1).AddDays(-1);
         }
-
-
-
-
-
-
-
         // ---------- DoanhThu
 
+        
+        private void fAdmin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Đức thêm đoạn code load lại bàn và các món ăn khi tắt form Admin 
+            
+        }
 
 
 

@@ -21,7 +21,7 @@ namespace ProjectQLQuanCafe
             LoadTable();
         }
 
-        void LoadTable()
+        public void LoadTable()
         {
             TableDAL TblBAL = new TableDAL();
 
@@ -112,6 +112,9 @@ namespace ProjectQLQuanCafe
             f.ShowDialog();
         }
 
-        
+        private void fQuanLyDatMon_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -351,7 +351,7 @@
             this.đăngXuấtToolStripMenuItem});
             this.tàiKhoảnToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
             // danhMụcToolStripMenuItem
@@ -383,6 +383,7 @@
             this.Name = "fQuanLyDatMon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fQuanLyDatMon";
+            this.Load += new System.EventHandler(this.fQuanLyDatMon_Load);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
