@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.txtTongTien = new System.Windows.Forms.TextBox();
-            this.nmGiamGia = new System.Windows.Forms.NumericUpDown();
             this.lblTongTien = new System.Windows.Forms.Label();
             this.lblGiamGia = new System.Windows.Forms.Label();
             this.btnThanhToan = new System.Windows.Forms.Button();
@@ -37,35 +36,38 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lstMonAn = new System.Windows.Forms.ListView();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.nmGiaGia = new System.Windows.Forms.NumericUpDown();
             this.btnChuyenBan = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.nmSoLuongMon = new System.Windows.Forms.NumericUpDown();
             this.btnXoaMon = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.nmSoLuongMon = new System.Windows.Forms.NumericUpDown();
             this.btnThemMon = new System.Windows.Forms.Button();
             this.cmbTenMon = new System.Windows.Forms.ComboBox();
             this.cmbDanhMuc = new System.Windows.Forms.ComboBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            ((System.ComponentModel.ISupportInitialize)(this.nmGiamGia)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmGiaGia)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmSoLuongMon)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmSoLuongMon)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,19 +78,6 @@
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.Size = new System.Drawing.Size(116, 40);
             this.txtTongTien.TabIndex = 9;
-            // 
-            // nmGiamGia
-            // 
-            this.nmGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.nmGiamGia.Location = new System.Drawing.Point(40, 185);
-            this.nmGiamGia.Name = "nmGiamGia";
-            this.nmGiamGia.Size = new System.Drawing.Size(47, 24);
-            this.nmGiamGia.TabIndex = 8;
-            this.nmGiamGia.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             // 
             // lblTongTien
             // 
@@ -152,8 +141,8 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.nmGiaGia);
             this.panel5.Controls.Add(this.txtTongTien);
-            this.panel5.Controls.Add(this.nmGiamGia);
             this.panel5.Controls.Add(this.lblTongTien);
             this.panel5.Controls.Add(this.lblGiamGia);
             this.panel5.Controls.Add(this.btnThanhToan);
@@ -164,6 +153,14 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(121, 469);
             this.panel5.TabIndex = 1;
+            // 
+            // nmGiaGia
+            // 
+            this.nmGiaGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.nmGiaGia.Location = new System.Drawing.Point(46, 188);
+            this.nmGiaGia.Name = "nmGiaGia";
+            this.nmGiaGia.Size = new System.Drawing.Size(33, 24);
+            this.nmGiaGia.TabIndex = 11;
             // 
             // btnChuyenBan
             // 
@@ -198,24 +195,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(590, 475);
             this.panel3.TabIndex = 1;
-            // 
-            // nmSoLuongMon
-            // 
-            this.nmSoLuongMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.nmSoLuongMon.Location = new System.Drawing.Point(279, 35);
-            this.nmSoLuongMon.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nmSoLuongMon.Name = "nmSoLuongMon";
-            this.nmSoLuongMon.Size = new System.Drawing.Size(47, 24);
-            this.nmSoLuongMon.TabIndex = 3;
-            this.nmSoLuongMon.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             // 
             // btnXoaMon
             // 
@@ -255,6 +234,24 @@
             this.panel2.Size = new System.Drawing.Size(590, 87);
             this.panel2.TabIndex = 0;
             // 
+            // nmSoLuongMon
+            // 
+            this.nmSoLuongMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.nmSoLuongMon.Location = new System.Drawing.Point(277, 32);
+            this.nmSoLuongMon.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nmSoLuongMon.Name = "nmSoLuongMon";
+            this.nmSoLuongMon.Size = new System.Drawing.Size(44, 24);
+            this.nmSoLuongMon.TabIndex = 6;
+            this.nmSoLuongMon.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // btnThemMon
             // 
             this.btnThemMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -282,14 +279,7 @@
             this.cmbDanhMuc.Name = "cmbDanhMuc";
             this.cmbDanhMuc.Size = new System.Drawing.Size(251, 26);
             this.cmbDanhMuc.TabIndex = 1;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(354, 574);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.cmbDanhMuc.SelectedValueChanged += new System.EventHandler(this.cmbDanhMuc_SelectedValueChanged);
             // 
             // panel1
             // 
@@ -305,8 +295,8 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.5F));
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel6, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 28);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -314,6 +304,24 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(962, 580);
             this.tableLayoutPanel1.TabIndex = 3;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.flpTable);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(3, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(354, 574);
+            this.panel6.TabIndex = 2;
+            // 
+            // flpTable
+            // 
+            this.flpTable.AutoScroll = true;
+            this.flpTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpTable.Location = new System.Drawing.Point(0, 0);
+            this.flpTable.Name = "flpTable";
+            this.flpTable.Size = new System.Drawing.Size(354, 574);
+            this.flpTable.TabIndex = 0;
             // 
             // đăngXuấtToolStripMenuItem
             // 
@@ -375,17 +383,18 @@
             this.Name = "fQuanLyDatMon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fQuanLyDatMon";
-            ((System.ComponentModel.ISupportInitialize)(this.nmGiamGia)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmGiaGia)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nmSoLuongMon)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nmSoLuongMon)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -396,7 +405,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtTongTien;
-        private System.Windows.Forms.NumericUpDown nmGiamGia;
         private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.Label lblGiamGia;
         private System.Windows.Forms.Button btnThanhToan;
@@ -407,14 +415,12 @@
         private System.Windows.Forms.Button btnChuyenBan;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.NumericUpDown nmSoLuongMon;
         private System.Windows.Forms.Button btnXoaMon;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnThemMon;
         private System.Windows.Forms.ComboBox cmbTenMon;
         private System.Windows.Forms.ComboBox cmbDanhMuc;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
@@ -423,5 +429,9 @@
         private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem danhMụcToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.NumericUpDown nmGiaGia;
+        private System.Windows.Forms.NumericUpDown nmSoLuongMon;
+        private System.Windows.Forms.FlowLayoutPanel flpTable;
     }
 }

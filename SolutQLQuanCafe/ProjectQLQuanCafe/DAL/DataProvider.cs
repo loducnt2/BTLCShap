@@ -12,12 +12,16 @@ namespace ProjectQLQuanCafe.DAL
     {
         private string connString = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyQuanCafe;Integrated Security=True";
 
+        public static object Instance { get; internal set; }
+
         public SqlConnection getConnect()
         {
             return new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyQuanCafe;Integrated Security=True");
         }
         // Video
         // Lệnh sql trả về một bảng
+
+        
         public DataTable ExecuteQuery(string sql)
         {
             DataTable dt = new DataTable();
@@ -27,8 +31,9 @@ namespace ProjectQLQuanCafe.DAL
                 
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-                da.Fill(dt);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                dt = ds.Tables[0];
                 conn.Close();
             }
             return (dt);
