@@ -35,13 +35,13 @@ namespace ProjectQLQuanCafe
 
             DanhMucLoadList();
 
-            BanAnLoadList();
             cmbBanAnTrangThai.Items.Add("Trống");
             cmbBanAnTrangThai.Items.Add("Có người");
+            BanAnLoadList();
 
-            TaiKhoanLoadList();
             cmbTaiKhoanLoaiTK.Items.Add("Staff");
             cmbTaiKhoanLoaiTK.Items.Add("Admin");
+            TaiKhoanLoadList();
 
         }
 
