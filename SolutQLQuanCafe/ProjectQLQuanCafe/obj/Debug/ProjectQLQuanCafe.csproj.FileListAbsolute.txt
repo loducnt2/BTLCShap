@@ -18,7 +18,6 @@ D:\Nam 3\C#\TeamC#\QuanLyQuanCafe\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\Pr
 D:\Nam 3\C#\TeamC#\QuanLyQuanCafe\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.fLogin.resources
 D:\Nam 3\C#\TeamC#\QuanLyQuanCafe\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.Properties.Resources.resources
 D:\Nam 3\C#\TeamC#\QuanLyQuanCafe\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.csproj.GenerateResource.Cache
-<<<<<<< HEAD
 C:\Users\admin\Documents\GitHub\QuanLyQuanCafe\SolutQLQuanCafe\ProjectQLQuanCafe\bin\Debug\ProjectQLQuanCafe.exe.config
 C:\Users\admin\Documents\GitHub\QuanLyQuanCafe\SolutQLQuanCafe\ProjectQLQuanCafe\bin\Debug\ProjectQLQuanCafe.exe
 C:\Users\admin\Documents\GitHub\QuanLyQuanCafe\SolutQLQuanCafe\ProjectQLQuanCafe\bin\Debug\ProjectQLQuanCafe.pdb
@@ -81,7 +80,6 @@ D:\Nam 3\C#\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.fL
 D:\Nam 3\C#\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.fQuanLyDatMon.resources
 D:\Nam 3\C#\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.Properties.Resources.resources
 D:\Nam 3\C#\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.csproj.GenerateResource.Cache
-=======
 E:\project\QuanLyQuanCafe\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\bin\Debug\ProjectQLQuanCafe.exe.config
 E:\project\QuanLyQuanCafe\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\bin\Debug\ProjectQLQuanCafe.exe
 E:\project\QuanLyQuanCafe\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\bin\Debug\ProjectQLQuanCafe.pdb

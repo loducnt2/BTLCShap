@@ -18,7 +18,7 @@ namespace ProjectQLQuanCafe.DAL
         {
             return new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyQuanCafe;Integrated Security=True");
         }
-        // Video
+
         // Lệnh sql trả về một bảng
 
         
@@ -31,8 +31,10 @@ namespace ProjectQLQuanCafe.DAL
                 
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
+
                 DataSet ds = new DataSet();
                 da.Fill(ds);
+
                 dt = ds.Tables[0];
                 conn.Close();
             }

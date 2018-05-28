@@ -19,18 +19,23 @@ namespace ProjectQLQuanCafe
             InitializeComponent();
 
             LoadTable();
+            LoadCategory();
         }
 
         void LoadTable()
         {
-            TableDAL TblBAL = new TableDAL();
-
             List<Table> listTable = new List<Table>();
-            listTable = TblBAL.GetListTable();
+
+            FoodTableDAL TblDAL = new FoodTableDAL();
+            listTable = TblDAL.GetListTable();
+
             foreach (Table item in listTable)
             {
-                Button btn = new Button() { Width = TableDAL.TableWidth, Height = TableDAL.TableHeight };
+                Button btn = new Button() { Width = FoodTableDAL.TableWidth, Height = FoodTableDAL.TableHeight };
                 btn.Text = item.Name + Environment.NewLine + item.Status;
+
+                btn.Click += btn_Click;
+                btn.Tag = item;
 
                 switch (item.Status)
                 {
@@ -41,36 +46,69 @@ namespace ProjectQLQuanCafe
                         btn.BackColor = Color.Red;
                         break;
                 }
-
                 flpTable.Controls.Add(btn);
-            }
-            /*
-            flpTables.Controls.Clear();
-            List<Table> listTable = new List<Table>();
-            listTable = TableBLL.Instance.GetListTable();
-            flpTables.Controls.Clear();
-            foreach (Table tbl in listTable)
+            }  
+        }
+        
+        void ShowOrder(int id)
+        {
+            OrderDetailDAL odtDAL = new OrderDetailDAL();
+            FoodOrderDAL foDAL = new FoodOrderDAL();
+            MenuDAL mDAL = new MenuDAL();
+
+            lstMonAn.Items.Clear();
+            List<ProjectQLQuanCafe.BLL.Menu> listOrderDetail = mDAL.GetListMenuByTableID(id);
+
+            foreach (ProjectQLQuanCafe.BLL.Menu item in listOrderDetail)
             {
-                Button table = new Button() { Width = 90, Height = 60, FlatStyle = FlatStyle.Flat, TextAlign = ContentAlignment.BottomLeft, ImageAlign = ContentAlignment.TopRight, Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold) };
-                table.Click += Table_Click;
-                table.Text = tbl.NameTable;
-                table.Tag = tbl;
-                table.BackColor = Color.AntiqueWhite;
-                table.Cursor = System.Windows.Forms.Cursors.Hand;
-                table.ForeColor = System.Drawing.Color.Red;
-                switch ((int)tbl.Status)
-                {
-                    case 0:
-                        table.Image = Resources.TableEmpty1;
-                        break;
-                    default:
-                        table.Image = Resources.TableFull1;
-                        break;
-                }
-                flpTables.Controls.Add(table);
+                ListViewItem lsvItem = new ListViewItem(item.FoodName.ToString());
+                lsvItem.SubItems.Add(item.Amount.ToString());
+                lsvItem.SubItems.Add(item.Price.ToString());
+                lsvItem.SubItems.Add(item.TotalPrice.ToString());
+
+                lstMonAn.Items.Add(lsvItem);
+            }
+
+            /*
+            lstMonAn.Items.Clear();
+            List<OrderDetailDuc> listOrderDetail = odtDAL.GetListOrderDetail(foDAL.GetUnCheckOrderByTableID(id));
+            
+            foreach (OrderDetailDuc item in listOrderDetail)
+            {
+                ListViewItem lsvItem = new ListViewItem(item.FoodID.ToString());
+                lsvItem.SubItems.Add(item.Amount.ToString());
+
+                lstMonAn.Items.Add(lsvItem);
             }
             */
         }
+
+        void LoadCategory()
+        {
+            CategoryDAL cateDAL = new CategoryDAL();
+            List<CategoryDuc> listCate = cateDAL.GetListFoodCategory();
+            cmbDanhMuc.DataSource = listCate;
+            cmbDanhMuc.DisplayMember = "name";
+
+        }
+        void LoadFoodListByCategoryID(int id)
+        {
+            FoodDAL fooDAL = new FoodDAL();
+            List<FoodDuc> listFood = fooDAL.GetFoodByCategoryID(id);
+            cmbTenMon.DataSource = listFood;
+            cmbTenMon.DisplayMember = "name";
+        }
+
+
+            // --------    EVENT   -----------
+
+            // Sự kiện click từng button Bàn
+            void btn_Click(object sender, EventArgs e)
+        {
+            int tableID = ((sender as Button).Tag as Table).ID;
+            ShowOrder(tableID);
+        }
+
         /*
         FoodTable ban = new FoodTable();
         string ma_lop;
@@ -95,10 +133,7 @@ namespace ProjectQLQuanCafe
             HienThiHoaDon(idTable);
         }
         */
-        private void cmbDanhMuc_SelectedValueChanged(object sender, EventArgs e)
-        {
 
-        }
         // KHAC
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -112,6 +147,17 @@ namespace ProjectQLQuanCafe
             f.ShowDialog();
         }
 
-        
+        // Sự kiện Load FoodList theo CategoryID sau mỗi lần thay đổi CategoryID
+        private void cmbDanhMuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int id = 0;
+            ComboBox cmb = sender as ComboBox;
+            if (cmb.SelectedItem == null)
+                return;
+            CategoryDuc selected = cmb.SelectedItem as CategoryDuc;
+            id = selected.ID;
+
+            LoadFoodListByCategoryID(id);
+        }
     }
 }
