@@ -1265,6 +1265,7 @@
             this.Name = "fAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Control Panel";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fAdmin_FormClosing);
             this.Load += new System.EventHandler(this.fAdmin_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tabCAdmin.ResumeLayout(false);

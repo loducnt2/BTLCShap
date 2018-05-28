@@ -22,7 +22,7 @@ namespace ProjectQLQuanCafe
             LoadCategory();
         }
 
-        void LoadTable()
+        public void LoadTable()
         {
             List<Table> listTable = new List<Table>();
 
@@ -147,6 +147,7 @@ namespace ProjectQLQuanCafe
             f.ShowDialog();
         }
 
+<<<<<<< HEAD
         // Sự kiện Load FoodList theo CategoryID sau mỗi lần thay đổi CategoryID
         private void cmbDanhMuc_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -158,6 +159,11 @@ namespace ProjectQLQuanCafe
             id = selected.ID;
 
             LoadFoodListByCategoryID(id);
+=======
+        private void fQuanLyDatMon_Load(object sender, EventArgs e)
+        {
+
+>>>>>>> a8e84e6f56b6dd08ebcf1e529c9b052b16f893a6
         }
     }
 }
