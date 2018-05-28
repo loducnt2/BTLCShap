@@ -59,6 +59,9 @@ namespace ProjectQLQuanCafe
             lstMonAn.Items.Clear();
             List<ProjectQLQuanCafe.BLL.Menu> listOrderDetail = mDAL.GetListMenuByTableID(id);
 
+            float Tong = 0;
+
+
             foreach (ProjectQLQuanCafe.BLL.Menu item in listOrderDetail)
             {
                 ListViewItem lsvItem = new ListViewItem(item.FoodName.ToString());
@@ -66,9 +69,11 @@ namespace ProjectQLQuanCafe
                 lsvItem.SubItems.Add(item.Price.ToString());
                 lsvItem.SubItems.Add(item.TotalPrice.ToString());
 
+                Tong += item.TotalPrice;
+
                 lstMonAn.Items.Add(lsvItem);
             }
-
+            txtTongTien.Text = Tong.ToString("c");
             /*
             lstMonAn.Items.Clear();
             List<OrderDetailDuc> listOrderDetail = odtDAL.GetListOrderDetail(foDAL.GetUnCheckOrderByTableID(id));
@@ -147,7 +152,6 @@ namespace ProjectQLQuanCafe
             f.ShowDialog();
         }
 
-<<<<<<< HEAD
         // Sự kiện Load FoodList theo CategoryID sau mỗi lần thay đổi CategoryID
         private void cmbDanhMuc_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -159,11 +163,9 @@ namespace ProjectQLQuanCafe
             id = selected.ID;
 
             LoadFoodListByCategoryID(id);
-=======
+        }
         private void fQuanLyDatMon_Load(object sender, EventArgs e)
         {
-
->>>>>>> a8e84e6f56b6dd08ebcf1e529c9b052b16f893a6
         }
     }
 }

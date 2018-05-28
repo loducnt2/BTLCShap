@@ -38,6 +38,8 @@
             this.lstMonAn = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel5 = new System.Windows.Forms.Panel();
             this.nmGiaGia = new System.Windows.Forms.NumericUpDown();
             this.btnChuyenBan = new System.Windows.Forms.Button();
@@ -60,8 +62,6 @@
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -79,11 +79,16 @@
             // 
             // txtTongTien
             // 
+            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTongTien.ForeColor = System.Drawing.SystemColors.Highlight;
             this.txtTongTien.Location = new System.Drawing.Point(3, 286);
             this.txtTongTien.Multiline = true;
             this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.ReadOnly = true;
             this.txtTongTien.Size = new System.Drawing.Size(116, 40);
             this.txtTongTien.TabIndex = 9;
+            this.txtTongTien.Text = "0";
+            this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblTongTien
             // 
@@ -153,6 +158,7 @@
             this.columnHeader3,
             this.columnHeader4});
             this.lstMonAn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstMonAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lstMonAn.Location = new System.Drawing.Point(0, 0);
             this.lstMonAn.Name = "lstMonAn";
             this.lstMonAn.Size = new System.Drawing.Size(457, 469);
@@ -169,6 +175,16 @@
             // 
             this.columnHeader2.Text = "Số lượng";
             this.columnHeader2.Width = 61;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Đơn giá";
+            this.columnHeader3.Width = 71;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Thành tiền";
+            this.columnHeader4.Width = 271;
             // 
             // panel5
             // 
@@ -295,7 +311,7 @@
             // 
             // cmbTenMon
             // 
-            this.cmbTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cmbTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cmbTenMon.FormattingEnabled = true;
             this.cmbTenMon.Location = new System.Drawing.Point(7, 44);
             this.cmbTenMon.Name = "cmbTenMon";
@@ -304,7 +320,7 @@
             // 
             // cmbDanhMuc
             // 
-            this.cmbDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cmbDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cmbDanhMuc.FormattingEnabled = true;
             this.cmbDanhMuc.Location = new System.Drawing.Point(7, 12);
             this.cmbDanhMuc.Name = "cmbDanhMuc";
@@ -382,7 +398,7 @@
             this.đăngXuấtToolStripMenuItem});
             this.tàiKhoảnToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
             // danhMụcToolStripMenuItem
@@ -403,16 +419,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(962, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Đơn giá";
-            this.columnHeader3.Width = 71;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Thành tiền";
-            this.columnHeader4.Width = 271;
             // 
             // fQuanLyDatMon
             // 

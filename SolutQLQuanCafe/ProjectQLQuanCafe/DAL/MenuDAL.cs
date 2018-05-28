@@ -14,7 +14,7 @@ namespace ProjectQLQuanCafe.DAL
         public List<Menu> GetListMenuByTableID(int id)
         {
             List<Menu> listMenu = new List<Menu>();
-            string query = "select Food.name, OrderDetail.amount, Food.price, OrderDetail.amount*Food.price as TongTien from OrderDetail, FoodOrder, Food where OrderDetail.idFoodOrder = FoodOrder.id AND OrderDetail.idFood = Food.id AND FoodOrder.idFoodTable = " + id;
+            string query = "select Food.name, OrderDetail.amount, Food.price, OrderDetail.amount*Food.price as TongTien from OrderDetail, FoodOrder, Food where OrderDetail.idFoodOrder = FoodOrder.id AND OrderDetail.idFood = Food.id AND FoodOrder.Status = 0 AND FoodOrder.idFoodTable = " + id;
             DataTable dt = dtPro.ExecuteQuery(query);
             foreach (DataRow item in dt.Rows)
             {
