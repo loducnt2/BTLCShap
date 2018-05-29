@@ -51,12 +51,22 @@
     <Compile Include="BLL\AdminMonAn.cs" />
     <Compile Include="BLL\AdminTaiKhoan.cs" />
     <Compile Include="BLL\Category.cs" />
+    <Compile Include="BLL\CategoryDuc.cs" />
+    <Compile Include="BLL\FoodDuc.cs" />
+    <Compile Include="BLL\FoodOrderDuc.cs" />
     <Compile Include="BLL\FoodTable.cs" />
+    <Compile Include="BLL\Menu.cs" />
     <Compile Include="BLL\OrderDetail.cs" />
+    <Compile Include="BLL\OrderDetailDuc.cs" />
     <Compile Include="BLL\Table.cs" />
+    <Compile Include="DAL\CategoryDAL.cs" />
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="BLL\AdminThongKeDoanhThu.cs" />
-    <Compile Include="BLL\TableDAL.cs" />
+    <Compile Include="DAL\FoodDAL.cs" />
+    <Compile Include="DAL\FoodOrderDAL.cs" />
+    <Compile Include="DAL\FoodTableDAL.cs" />
+    <Compile Include="DAL\MenuDAL.cs" />
+    <Compile Include="DAL\OrderDetailDAL.cs" />
     <Compile Include="fAccount.cs">
       <SubType>Form</SubType>
     </Compile>

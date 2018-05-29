@@ -22,9 +22,7 @@ namespace ProjectQLQuanCafe.BLL
             this.Name = row[1].ToString();
             this.Status = row[2].ToString();
         }
-        
 
-       
     }
 
 }

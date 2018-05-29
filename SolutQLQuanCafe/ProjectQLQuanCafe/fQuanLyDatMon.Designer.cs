@@ -34,7 +34,12 @@
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.cmbChuyenBan = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.lstMonAn = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel5 = new System.Windows.Forms.Panel();
             this.nmGiaGia = new System.Windows.Forms.NumericUpDown();
             this.btnChuyenBan = new System.Windows.Forms.Button();
@@ -58,6 +63,7 @@
             this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panel4.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmGiaGia)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
@@ -73,11 +79,16 @@
             // 
             // txtTongTien
             // 
+            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTongTien.ForeColor = System.Drawing.SystemColors.Highlight;
             this.txtTongTien.Location = new System.Drawing.Point(3, 286);
             this.txtTongTien.Multiline = true;
             this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.ReadOnly = true;
             this.txtTongTien.Size = new System.Drawing.Size(116, 40);
             this.txtTongTien.TabIndex = 9;
+            this.txtTongTien.Text = "0";
+            this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblTongTien
             // 
@@ -123,21 +134,57 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.lstMonAn);
+            this.panel4.Controls.Add(this.panel7);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(457, 469);
             this.panel4.TabIndex = 0;
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.lstMonAn);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(457, 469);
+            this.panel7.TabIndex = 0;
+            // 
             // lstMonAn
             // 
+            this.lstMonAn.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
             this.lstMonAn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstMonAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lstMonAn.Location = new System.Drawing.Point(0, 0);
             this.lstMonAn.Name = "lstMonAn";
             this.lstMonAn.Size = new System.Drawing.Size(457, 469);
-            this.lstMonAn.TabIndex = 1;
+            this.lstMonAn.TabIndex = 0;
             this.lstMonAn.UseCompatibleStateImageBehavior = false;
+            this.lstMonAn.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên món";
+            this.columnHeader1.Width = 226;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Số lượng";
+            this.columnHeader2.Width = 61;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Đơn giá";
+            this.columnHeader3.Width = 71;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Thành tiền";
+            this.columnHeader4.Width = 271;
             // 
             // panel5
             // 
@@ -264,7 +311,7 @@
             // 
             // cmbTenMon
             // 
-            this.cmbTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cmbTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cmbTenMon.FormattingEnabled = true;
             this.cmbTenMon.Location = new System.Drawing.Point(7, 44);
             this.cmbTenMon.Name = "cmbTenMon";
@@ -273,13 +320,13 @@
             // 
             // cmbDanhMuc
             // 
-            this.cmbDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cmbDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cmbDanhMuc.FormattingEnabled = true;
             this.cmbDanhMuc.Location = new System.Drawing.Point(7, 12);
             this.cmbDanhMuc.Name = "cmbDanhMuc";
             this.cmbDanhMuc.Size = new System.Drawing.Size(251, 26);
             this.cmbDanhMuc.TabIndex = 1;
-            this.cmbDanhMuc.SelectedValueChanged += new System.EventHandler(this.cmbDanhMuc_SelectedValueChanged);
+            this.cmbDanhMuc.SelectedIndexChanged += new System.EventHandler(this.cmbDanhMuc_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -351,7 +398,7 @@
             this.đăngXuấtToolStripMenuItem});
             this.tàiKhoảnToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
             // danhMụcToolStripMenuItem
@@ -385,6 +432,7 @@
             this.Text = "fQuanLyDatMon";
             this.Load += new System.EventHandler(this.fQuanLyDatMon_Load);
             this.panel4.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmGiaGia)).EndInit();
@@ -411,7 +459,6 @@
         private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.ComboBox cmbChuyenBan;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ListView lstMonAn;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnChuyenBan;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
@@ -434,5 +481,11 @@
         private System.Windows.Forms.NumericUpDown nmGiaGia;
         private System.Windows.Forms.NumericUpDown nmSoLuongMon;
         private System.Windows.Forms.FlowLayoutPanel flpTable;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.ListView lstMonAn;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

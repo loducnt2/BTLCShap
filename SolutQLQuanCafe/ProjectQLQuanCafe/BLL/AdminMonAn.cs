@@ -9,7 +9,7 @@ using ProjectQLQuanCafe.DAL;
 
 namespace ProjectQLQuanCafe.BLL
 {
-    class AdminMonAn
+    public class AdminMonAn
     {
         DataProvider da = new DataProvider();
         public DataTable GetListMonAn()
