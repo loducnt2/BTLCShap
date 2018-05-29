@@ -22,5 +22,39 @@ namespace ProjectQLQuanCafe.DAL
             }
             return -1;
         }
+
+        
+        public void CheckOut(int id)
+        {
+            string query = "update FoodOrder SET Status = 1 where id = " + id;
+            dtPro.ExecuteQuery(query);
+        }
+        
+        public void InsertOrder(int idTable, int discount)
+        {
+            //string query = "insert into FoodOrder values('"+ GETDATE() + "', '"+ null + "', '"+ 0 +"', '"+ idTable +"' )";
+            string query = "EXEC proc_InsertOrder '" + idTable +"', '"+ discount +"'";
+            dtPro.ExecuteNonQuery(query);
+        }
+
+        /*
+        private string GETDATE()
+        {
+            throw new NotImplementedException();
+        }
+        */
+
+        public int GetMaxIDOrder()
+        {
+            try
+            {
+                return (int)dtPro.ExecuteScalar("select MAX(id) from FoodOrder");
+            }
+            catch
+            {
+                return 1;
+            }
+        }
     }
+
 }
