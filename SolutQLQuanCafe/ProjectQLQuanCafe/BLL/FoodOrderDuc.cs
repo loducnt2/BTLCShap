@@ -43,7 +43,11 @@ namespace ProjectQLQuanCafe.BLL
 
             this.Status = (int)row["Status"];
             //this.TotalPrice = (float)Convert.ToDouble(row["totalPrice"].ToString());
-            //this.Discount = (int)row["discount"];
+            var totalPriceTemp = row["totalPrice"];
+            if (totalPriceTemp.ToString() != "")
+                this.TotalPrice = (float)Convert.ToDouble(totalPriceTemp.ToString());
+
+            this.Discount = (int)row["discount"];
 
         }
     }

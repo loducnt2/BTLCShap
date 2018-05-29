@@ -204,9 +204,9 @@
             // nmGiaGia
             // 
             this.nmGiaGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.nmGiaGia.Location = new System.Drawing.Point(46, 188);
+            this.nmGiaGia.Location = new System.Drawing.Point(31, 188);
             this.nmGiaGia.Name = "nmGiaGia";
-            this.nmGiaGia.Size = new System.Drawing.Size(33, 24);
+            this.nmGiaGia.Size = new System.Drawing.Size(60, 24);
             this.nmGiaGia.TabIndex = 11;
             // 
             // btnChuyenBan
@@ -273,14 +273,14 @@
             // nmSoLuongMon
             // 
             this.nmSoLuongMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.nmSoLuongMon.Location = new System.Drawing.Point(277, 32);
+            this.nmSoLuongMon.Location = new System.Drawing.Point(326, 32);
             this.nmSoLuongMon.Minimum = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
             this.nmSoLuongMon.Name = "nmSoLuongMon";
-            this.nmSoLuongMon.Size = new System.Drawing.Size(44, 24);
+            this.nmSoLuongMon.Size = new System.Drawing.Size(71, 24);
             this.nmSoLuongMon.TabIndex = 6;
             this.nmSoLuongMon.Value = new decimal(new int[] {
             1,
@@ -291,7 +291,7 @@
             // btnThemMon
             // 
             this.btnThemMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnThemMon.Location = new System.Drawing.Point(338, 16);
+            this.btnThemMon.Location = new System.Drawing.Point(429, 16);
             this.btnThemMon.Name = "btnThemMon";
             this.btnThemMon.Size = new System.Drawing.Size(118, 54);
             this.btnThemMon.TabIndex = 4;
@@ -305,7 +305,7 @@
             this.cmbTenMon.FormattingEnabled = true;
             this.cmbTenMon.Location = new System.Drawing.Point(7, 44);
             this.cmbTenMon.Name = "cmbTenMon";
-            this.cmbTenMon.Size = new System.Drawing.Size(251, 26);
+            this.cmbTenMon.Size = new System.Drawing.Size(288, 26);
             this.cmbTenMon.TabIndex = 2;
             // 
             // cmbDanhMuc
@@ -314,7 +314,7 @@
             this.cmbDanhMuc.FormattingEnabled = true;
             this.cmbDanhMuc.Location = new System.Drawing.Point(7, 12);
             this.cmbDanhMuc.Name = "cmbDanhMuc";
-            this.cmbDanhMuc.Size = new System.Drawing.Size(251, 26);
+            this.cmbDanhMuc.Size = new System.Drawing.Size(288, 26);
             this.cmbDanhMuc.TabIndex = 1;
             this.cmbDanhMuc.SelectedIndexChanged += new System.EventHandler(this.cmbDanhMuc_SelectedIndexChanged);
             // 

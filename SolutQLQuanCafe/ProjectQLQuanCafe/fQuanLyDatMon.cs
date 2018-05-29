@@ -28,6 +28,8 @@ namespace ProjectQLQuanCafe
 
         public void LoadTable()
         {
+            flpTable.Controls.Clear();
+
             List<Table> listTable = new List<Table>();
 
             FoodTableDAL TblDAL = new FoodTableDAL();
@@ -56,14 +58,13 @@ namespace ProjectQLQuanCafe
         
         void ShowOrder(int id)
         {
-            
-
             lsvMonAn.Items.Clear();
             List<ProjectQLQuanCafe.BLL.Menu> listOrderDetail = mDAL.GetListMenuByTableID(id);
 
             float Tong = 0;
-
-
+            float giam = (float)(100 - (int)(nmGiaGia.Value)) / 100;
+            //float chia = giam / 100;
+            float TongTien = 0;
             foreach (ProjectQLQuanCafe.BLL.Menu item in listOrderDetail)
             {
                 ListViewItem lsvItem = new ListViewItem(item.FoodName.ToString());
@@ -72,10 +73,13 @@ namespace ProjectQLQuanCafe
                 lsvItem.SubItems.Add(item.TotalPrice.ToString());
 
                 Tong += item.TotalPrice;
-
+                
                 lsvMonAn.Items.Add(lsvItem);
             }
-            txtTongTien.Text = Tong.ToString("c");
+            TongTien = Tong * giam;
+
+            txtTongTien.Text = TongTien.ToString();
+
             /*
             lstMonAn.Items.Clear();
             List<OrderDetailDuc> listOrderDetail = odtDAL.GetListOrderDetail(foDAL.GetUnCheckOrderByTableID(id));
@@ -178,18 +182,24 @@ namespace ProjectQLQuanCafe
             Table table = lsvMonAn.Tag as Table;
 
             int idOrder = foDAL.GetUnCheckOrderByTableID(table.ID);
-            if(idOrder != -1)
+
+            float tongtien = float.Parse(txtTongTien.Text);
+
+            if (idOrder != -1)
             {
-                if(MessageBox.Show("Bạn chắc chấc thanh toán bàn ", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                if(MessageBox.Show("Bạn chắc chấc thanh toán bàn ", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    foDAL.CheckOut(idOrder);
+                    foDAL.CheckOut(idOrder, tongtien);
                     ShowOrder(table.ID);
-                }
+
+                    LoadTable();
+                } 
             }
             else
             {
                 MessageBox.Show("Bàn này đã thanh toán rồi nhé !!!");
             }
+            
         }
         
         private void btnThemMon_Click(object sender, EventArgs e)
@@ -201,6 +211,7 @@ namespace ProjectQLQuanCafe
             int idFood = (cmbTenMon.SelectedItem as FoodDuc).ID;
             int soluong = (int)nmSoLuongMon.Value;
             int discount = (int)nmGiaGia.Value;
+            //float tong = (float)Convert.ToDouble(txtTongTien.ToString());
 
             if(idOrder == -1)
             {
@@ -213,6 +224,8 @@ namespace ProjectQLQuanCafe
             }
 
             ShowOrder(table.ID);
+
+            LoadTable();
         }
     }
 }

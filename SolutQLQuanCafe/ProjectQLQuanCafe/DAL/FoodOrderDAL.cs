@@ -24,16 +24,17 @@ namespace ProjectQLQuanCafe.DAL
         }
 
         
-        public void CheckOut(int id)
+        public void CheckOut(int id, float tong)
         {
-            string query = "update FoodOrder SET Status = 1 where id = " + id;
-            dtPro.ExecuteQuery(query);
+            //string query = "update FoodOrder SET Status = 1 where id = " + id;
+            string query = "update FoodOrder SET Status = 1, totalPrice = '" + tong + "' where id = " + id;
+            dtPro.ExecuteNonQuery(query);
         }
         
         public void InsertOrder(int idTable, int discount)
         {
             //string query = "insert into FoodOrder values('"+ GETDATE() + "', '"+ null + "', '"+ 0 +"', '"+ idTable +"' )";
-            string query = "EXEC proc_InsertOrder '" + idTable +"', '"+ discount +"'";
+            string query = "EXEC proc_InsertOrder '" + idTable + "', '" + discount +"'";
             dtPro.ExecuteNonQuery(query);
         }
 
