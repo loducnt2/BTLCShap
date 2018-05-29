@@ -35,7 +35,7 @@
             this.cmbChuyenBan = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.lstMonAn = new System.Windows.Forms.ListView();
+            this.lsvMonAn = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -45,7 +45,6 @@
             this.btnChuyenBan = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnXoaMon = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.nmSoLuongMon = new System.Windows.Forms.NumericUpDown();
@@ -122,6 +121,7 @@
             this.btnThanhToan.TabIndex = 10;
             this.btnThanhToan.Text = "Thanh toán";
             this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // cmbChuyenBan
             // 
@@ -143,43 +143,43 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.lstMonAn);
+            this.panel7.Controls.Add(this.lsvMonAn);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(457, 469);
             this.panel7.TabIndex = 0;
             // 
-            // lstMonAn
+            // lsvMonAn
             // 
-            this.lstMonAn.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lsvMonAn.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.lstMonAn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstMonAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lstMonAn.Location = new System.Drawing.Point(0, 0);
-            this.lstMonAn.Name = "lstMonAn";
-            this.lstMonAn.Size = new System.Drawing.Size(457, 469);
-            this.lstMonAn.TabIndex = 0;
-            this.lstMonAn.UseCompatibleStateImageBehavior = false;
-            this.lstMonAn.View = System.Windows.Forms.View.Details;
+            this.lsvMonAn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvMonAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lsvMonAn.Location = new System.Drawing.Point(0, 0);
+            this.lsvMonAn.Name = "lsvMonAn";
+            this.lsvMonAn.Size = new System.Drawing.Size(457, 469);
+            this.lsvMonAn.TabIndex = 0;
+            this.lsvMonAn.UseCompatibleStateImageBehavior = false;
+            this.lsvMonAn.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Tên món";
-            this.columnHeader1.Width = 226;
+            this.columnHeader1.Width = 215;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Số lượng";
-            this.columnHeader2.Width = 61;
+            this.columnHeader2.Width = 74;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Đơn giá";
-            this.columnHeader3.Width = 71;
+            this.columnHeader3.Width = 72;
             // 
             // columnHeader4
             // 
@@ -243,16 +243,6 @@
             this.panel3.Size = new System.Drawing.Size(590, 475);
             this.panel3.TabIndex = 1;
             // 
-            // btnXoaMon
-            // 
-            this.btnXoaMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnXoaMon.Location = new System.Drawing.Point(462, 16);
-            this.btnXoaMon.Name = "btnXoaMon";
-            this.btnXoaMon.Size = new System.Drawing.Size(118, 54);
-            this.btnXoaMon.TabIndex = 5;
-            this.btnXoaMon.Text = "Xóa món";
-            this.btnXoaMon.UseVisualStyleBackColor = true;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
@@ -271,7 +261,6 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.nmSoLuongMon);
-            this.panel2.Controls.Add(this.btnXoaMon);
             this.panel2.Controls.Add(this.btnThemMon);
             this.panel2.Controls.Add(this.cmbTenMon);
             this.panel2.Controls.Add(this.cmbDanhMuc);
@@ -286,10 +275,10 @@
             this.nmSoLuongMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.nmSoLuongMon.Location = new System.Drawing.Point(277, 32);
             this.nmSoLuongMon.Minimum = new decimal(new int[] {
-            1,
+            100,
             0,
             0,
-            0});
+            -2147483648});
             this.nmSoLuongMon.Name = "nmSoLuongMon";
             this.nmSoLuongMon.Size = new System.Drawing.Size(44, 24);
             this.nmSoLuongMon.TabIndex = 6;
@@ -308,6 +297,7 @@
             this.btnThemMon.TabIndex = 4;
             this.btnThemMon.Text = "Thêm món";
             this.btnThemMon.UseVisualStyleBackColor = true;
+            this.btnThemMon.Click += new System.EventHandler(this.btnThemMon_Click);
             // 
             // cmbTenMon
             // 
@@ -463,7 +453,6 @@
         private System.Windows.Forms.Button btnChuyenBan;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnXoaMon;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnThemMon;
@@ -482,7 +471,7 @@
         private System.Windows.Forms.NumericUpDown nmSoLuongMon;
         private System.Windows.Forms.FlowLayoutPanel flpTable;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.ListView lstMonAn;
+        private System.Windows.Forms.ListView lsvMonAn;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

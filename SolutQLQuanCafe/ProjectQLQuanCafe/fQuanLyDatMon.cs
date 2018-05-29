@@ -14,6 +14,10 @@ namespace ProjectQLQuanCafe
 {
     public partial class fQuanLyDatMon : Form
     {
+        OrderDetailDAL odtDAL = new OrderDetailDAL();
+        FoodOrderDAL foDAL = new FoodOrderDAL();
+        MenuDAL mDAL = new MenuDAL();
+
         public fQuanLyDatMon()
         {
             InitializeComponent();
@@ -52,11 +56,9 @@ namespace ProjectQLQuanCafe
         
         void ShowOrder(int id)
         {
-            OrderDetailDAL odtDAL = new OrderDetailDAL();
-            FoodOrderDAL foDAL = new FoodOrderDAL();
-            MenuDAL mDAL = new MenuDAL();
+            
 
-            lstMonAn.Items.Clear();
+            lsvMonAn.Items.Clear();
             List<ProjectQLQuanCafe.BLL.Menu> listOrderDetail = mDAL.GetListMenuByTableID(id);
 
             float Tong = 0;
@@ -71,7 +73,7 @@ namespace ProjectQLQuanCafe
 
                 Tong += item.TotalPrice;
 
-                lstMonAn.Items.Add(lsvItem);
+                lsvMonAn.Items.Add(lsvItem);
             }
             txtTongTien.Text = Tong.ToString("c");
             /*
@@ -108,9 +110,12 @@ namespace ProjectQLQuanCafe
             // --------    EVENT   -----------
 
             // Sự kiện click từng button Bàn
-            void btn_Click(object sender, EventArgs e)
+        void btn_Click(object sender, EventArgs e)
         {
             int tableID = ((sender as Button).Tag as Table).ID;
+
+            lsvMonAn.Tag = (sender as Button).Tag;
+
             ShowOrder(tableID);
         }
 
@@ -166,6 +171,48 @@ namespace ProjectQLQuanCafe
         }
         private void fQuanLyDatMon_Load(object sender, EventArgs e)
         {
+        }
+        
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            Table table = lsvMonAn.Tag as Table;
+
+            int idOrder = foDAL.GetUnCheckOrderByTableID(table.ID);
+            if(idOrder != -1)
+            {
+                if(MessageBox.Show("Bạn chắc chấc thanh toán bàn ", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                {
+                    foDAL.CheckOut(idOrder);
+                    ShowOrder(table.ID);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bàn này đã thanh toán rồi nhé !!!");
+            }
+        }
+        
+        private void btnThemMon_Click(object sender, EventArgs e)
+        {
+            // Lấy idTable hiện tại
+            Table table = lsvMonAn.Tag as Table;
+
+            int idOrder = foDAL.GetUnCheckOrderByTableID(table.ID);
+            int idFood = (cmbTenMon.SelectedItem as FoodDuc).ID;
+            int soluong = (int)nmSoLuongMon.Value;
+            int discount = (int)nmGiaGia.Value;
+
+            if(idOrder == -1)
+            {
+                foDAL.InsertOrder(table.ID, discount);
+                odtDAL.InsertOD(foDAL.GetMaxIDOrder(), idFood, soluong);
+            }
+            else
+            {
+                odtDAL.InsertOD(idOrder, idFood, soluong);
+            }
+
+            ShowOrder(table.ID);
         }
     }
 }

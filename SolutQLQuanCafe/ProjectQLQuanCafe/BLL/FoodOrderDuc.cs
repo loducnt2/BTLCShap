@@ -36,10 +36,10 @@ namespace ProjectQLQuanCafe.BLL
                  if (TimeCheckInTemp.ToString() != "")
                      this.TimeCheckIn = (DateTime?)TimeCheckInTemp;
                      */
-            this.TimeCheckIn = (DateTime?)row["TimeCheckOut"];
-                 //var TimeCheckOutTemp = row["TimeCheckOut"];
-                 //if(TimeCheckOutTemp.ToString() != "")
-                     //this.TimeCheckOut = (DateTime?)TimeCheckOutTemp;
+            //this.TimeCheckIn = (DateTime?)row["TimeCheckOut"];
+                 var TimeCheckOutTemp = row["TimeCheckOut"];
+                 if(TimeCheckOutTemp.ToString() != "")
+                     this.TimeCheckOut = (DateTime?)TimeCheckOutTemp;
 
             this.Status = (int)row["Status"];
             //this.TotalPrice = (float)Convert.ToDouble(row["totalPrice"].ToString());

@@ -25,5 +25,12 @@ namespace ProjectQLQuanCafe.DAL
             }
             return listOrderDetail;
         }
+
+        public void InsertOD(int idFoodOrder, int idFood, int amount)
+        {
+            //string query = "insert into OrderDetail values('" + idFoodOrder + "', '" + idFood + "', '" + amount + "')";
+            string query = "EXEC proc_InsertOrderDetail '" + idFoodOrder + "', '" + idFood + "', '" + amount + "'";
+            dtPro.ExecuteNonQuery(query);
+        }
     }
 }
