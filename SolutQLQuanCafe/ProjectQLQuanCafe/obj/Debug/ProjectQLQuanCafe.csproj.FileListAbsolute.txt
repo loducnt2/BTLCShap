@@ -93,3 +93,4 @@ E:\project\QuanLyQuanCafe\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\Projec
 E:\project\QuanLyQuanCafe\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.csproj.CoreCompileInputs.cache
 E:\project\QuanLyQuanCafe\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.exe
 E:\project\QuanLyQuanCafe\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.pdb
+E:\project\QuanLyQuanCafe\BTL\SolutQLQuanCafe\ProjectQLQuanCafe\obj\Debug\ProjectQLQuanCafe.csprojResolveAssemblyReference.cache
