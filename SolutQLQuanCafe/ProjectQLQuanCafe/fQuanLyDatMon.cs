@@ -17,6 +17,7 @@ namespace ProjectQLQuanCafe
         OrderDetailDAL odtDAL = new OrderDetailDAL();
         FoodOrderDAL foDAL = new FoodOrderDAL();
         MenuDAL mDAL = new MenuDAL();
+        FoodTableDAL ftDAL = new FoodTableDAL();
 
         public fQuanLyDatMon()
         {
@@ -24,6 +25,7 @@ namespace ProjectQLQuanCafe
 
             LoadTable();
             LoadCategory();
+            //LoadCmbTable();
         }
 
         public void LoadTable()
@@ -110,6 +112,12 @@ namespace ProjectQLQuanCafe
             cmbTenMon.DisplayMember = "name";
         }
 
+        void LoadCmbTable(ComboBox cmb)
+        {
+            cmb.DataSource = ftDAL.GetListTable();
+            cmb.DisplayMember = "TableName";
+        }
+
 
             // --------    EVENT   -----------
 
@@ -185,11 +193,13 @@ namespace ProjectQLQuanCafe
 
             float tongtien = float.Parse(txtTongTien.Text);
 
+            int Discount = (int)nmGiaGia.Value;
+
             if (idOrder != -1)
             {
                 if(MessageBox.Show("Bạn chắc chấc thanh toán bàn ", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    foDAL.CheckOut(idOrder, tongtien);
+                    foDAL.CheckOut(idOrder, tongtien, Discount);
                     ShowOrder(table.ID);
 
                     LoadTable();

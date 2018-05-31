@@ -24,10 +24,10 @@ namespace ProjectQLQuanCafe.DAL
         }
 
         
-        public void CheckOut(int id, float tong)
+        public void CheckOut(int id, float tong, int discount)
         {
             //string query = "update FoodOrder SET Status = 1 where id = " + id;
-            string query = "update FoodOrder SET Status = 1, totalPrice = '" + tong + "' where id = " + id;
+            string query = "update FoodOrder SET Status = 1, totalPrice = '" + tong + "', discount = '"+ discount +"' where id = " + id;
             dtPro.ExecuteNonQuery(query);
         }
         
