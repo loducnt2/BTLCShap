@@ -34,12 +34,15 @@ namespace ProjectQLQuanCafe
             LoadTable();
             LoadCategory();
             //LoadCmbTable();
+<<<<<<< HEAD
         }
 
         void ChangeAccount(int typeacc)
         {
             adminToolStripMenuItem.Enabled = typeacc == 1;
             thôngTinTàiKhoảnToolStripMenuItem.Text += " (" + LoginAccount.FullName + ")"; 
+=======
+>>>>>>> cd8fcb58b4a9405490df0a7dd5f75d70dc88169d
         }
 
         public void LoadTable()
