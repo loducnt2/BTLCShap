@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\Account.cs" />
     <Compile Include="BLL\AdminBanAn.cs" />
     <Compile Include="BLL\AdminDanhMuc.cs" />
     <Compile Include="BLL\AdminMonAn.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="BLL\OrderDetail.cs" />
     <Compile Include="BLL\OrderDetailDuc.cs" />
     <Compile Include="BLL\Table.cs" />
+    <Compile Include="DAL\AccountDAL.cs" />
     <Compile Include="DAL\CategoryDAL.cs" />
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="BLL\AdminThongKeDoanhThu.cs" />

@@ -19,13 +19,30 @@ namespace ProjectQLQuanCafe
         MenuDAL mDAL = new MenuDAL();
         FoodTableDAL ftDAL = new FoodTableDAL();
 
-        public fQuanLyDatMon()
+
+        private Account loginAccount;
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount.TypeAccount); }
+        }
+
+        public fQuanLyDatMon(Account acc)
         {
             InitializeComponent();
-
+            this.LoginAccount = acc;
             LoadTable();
             LoadCategory();
             //LoadCmbTable();
+<<<<<<< HEAD
+        }
+
+        void ChangeAccount(int typeacc)
+        {
+            adminToolStripMenuItem.Enabled = typeacc == 1;
+            thôngTinTàiKhoảnToolStripMenuItem.Text += " (" + LoginAccount.FullName + ")"; 
+=======
+>>>>>>> cd8fcb58b4a9405490df0a7dd5f75d70dc88169d
         }
 
         public void LoadTable()
@@ -165,7 +182,7 @@ namespace ProjectQLQuanCafe
 
         private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fAccount f = new fAccount();
+            fAccount f = new fAccount(LoginAccount);
             f.ShowDialog();
         }
 
@@ -184,7 +201,6 @@ namespace ProjectQLQuanCafe
         private void fQuanLyDatMon_Load(object sender, EventArgs e)
         {
         }
-        
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             Table table = lsvMonAn.Tag as Table;
