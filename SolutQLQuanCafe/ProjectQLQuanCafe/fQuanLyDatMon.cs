@@ -17,13 +17,29 @@ namespace ProjectQLQuanCafe
         OrderDetailDAL odtDAL = new OrderDetailDAL();
         FoodOrderDAL foDAL = new FoodOrderDAL();
         MenuDAL mDAL = new MenuDAL();
+        FoodTableDAL ftDAL = new FoodTableDAL();
 
-        public fQuanLyDatMon()
+
+        private Account loginAccount;
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount.TypeAccount); }
+        }
+
+        public fQuanLyDatMon(Account acc)
         {
             InitializeComponent();
-
+            this.LoginAccount = acc;
             LoadTable();
             LoadCategory();
+            //LoadCmbTable();
+        }
+
+        void ChangeAccount(int typeacc)
+        {
+            adminToolStripMenuItem.Enabled = typeacc == 1;
+            thôngTinTàiKhoảnToolStripMenuItem.Text += " (" + LoginAccount.FullName + ")"; 
         }
 
         public void LoadTable()
@@ -110,6 +126,12 @@ namespace ProjectQLQuanCafe
             cmbTenMon.DisplayMember = "name";
         }
 
+        void LoadCmbTable(ComboBox cmb)
+        {
+            cmb.DataSource = ftDAL.GetListTable();
+            cmb.DisplayMember = "TableName";
+        }
+
 
             // --------    EVENT   -----------
 
@@ -157,7 +179,7 @@ namespace ProjectQLQuanCafe
 
         private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fAccount f = new fAccount();
+            fAccount f = new fAccount(LoginAccount);
             f.ShowDialog();
         }
 
@@ -176,7 +198,6 @@ namespace ProjectQLQuanCafe
         private void fQuanLyDatMon_Load(object sender, EventArgs e)
         {
         }
-        
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             Table table = lsvMonAn.Tag as Table;
@@ -185,11 +206,13 @@ namespace ProjectQLQuanCafe
 
             float tongtien = float.Parse(txtTongTien.Text);
 
+            int Discount = (int)nmGiaGia.Value;
+
             if (idOrder != -1)
             {
                 if(MessageBox.Show("Bạn chắc chấc thanh toán bàn ", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    foDAL.CheckOut(idOrder, tongtien);
+                    foDAL.CheckOut(idOrder, tongtien, Discount);
                     ShowOrder(table.ID);
 
                     LoadTable();

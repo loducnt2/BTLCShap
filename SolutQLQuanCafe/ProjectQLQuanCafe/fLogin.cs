@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjectQLQuanCafe.BLL;
+using ProjectQLQuanCafe.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +18,8 @@ namespace ProjectQLQuanCafe
         {
             InitializeComponent();
         }
+        
+        AccountDAL aDAL = new AccountDAL();
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -50,10 +54,23 @@ namespace ProjectQLQuanCafe
                 MessageBox.Show("Sai tài khoản hoặc mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             */
-            fQuanLyDatMon fTableManager = new fQuanLyDatMon();
-            this.Hide();
-            fTableManager.ShowDialog();
-            this.Show();
+            string username = txtTaiKhoan.Text;
+            string password = txtMatKhau.Text;
+            if(Login(username,password))
+            {
+                Account loginAccount = aDAL.GetAccountByUserName(username);
+                fQuanLyDatMon fTableManager = new fQuanLyDatMon(loginAccount);
+                this.Hide();
+                fTableManager.ShowDialog();
+                this.Show();
+            }
+
+            
+        }
+
+        bool Login(string username,string password)
+        {
+            return aDAL.Login(username, password);
         }
 
         private void fLogin_Load(object sender, EventArgs e)
