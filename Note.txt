@@ -1,0 +1,27 @@
+﻿- Cái phần thanh toán của Đức có thêm cột Giá xem ở video bài 14.
+- Bảng FoodOrder thêm 2 cột là totalPrice và discount nữa! 
+- Form login còm phần mà hóa mật khẩu ở video 22
+
+-- Ngọc
+- Thêm phần không xóa được Acc đang đăng nhập 
+
+- https://github.com/loducnt2/BTLCShap
+
+
+	CAC LENH DE PULL CODE VE 
+- git init
+- git remote add origin https://github.com/loducnt2/BTLCShap.git
+- git pull origin master
+
+
+	CAC LENH DE PUSH CODE LEN
+- git init
+- git status
+- git add .
+- git commit -m "tso dus filr..."
+- git pull origin master
+- git push origin master
+
+
+
+
