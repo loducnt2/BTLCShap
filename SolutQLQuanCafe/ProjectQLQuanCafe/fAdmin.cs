@@ -202,6 +202,8 @@ namespace ProjectQLQuanCafe
         }
         private void btnDanhMucThem_Click(object sender, EventArgs e)
         {
+            //fQuanLyDatMon n = new fQuanLyDatMon();
+
             if (txtDanhMucTenDM.Text == "")
             {
                 MessageBox.Show("Hãy nhập đầy đủ thông tin", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -222,6 +224,7 @@ namespace ProjectQLQuanCafe
                     MessageBox.Show("Rất tiếc. Đã sảy ra lỗi khi thêm", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            //n.LoadCategory();
         }
 
         private void btnDanhMucSua_Click(object sender, EventArgs e)
