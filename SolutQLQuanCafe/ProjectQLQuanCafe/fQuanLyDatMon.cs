@@ -19,13 +19,32 @@ namespace ProjectQLQuanCafe
         MenuDAL mDAL = new MenuDAL();
         FoodTableDAL ftDAL = new FoodTableDAL();
 
-        public fQuanLyDatMon()
+
+        private Account loginAccount;
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount.TypeAccount); }
+        }
+
+        public fQuanLyDatMon(Account acc)
         {
             InitializeComponent();
-
+            this.LoginAccount = acc;
             LoadTable();
             LoadCategory();
             //LoadCmbTable();
+<<<<<<< HEAD
+=======
+
+        }
+
+        void ChangeAccount(int typeacc)
+        {
+            adminToolStripMenuItem.Enabled = typeacc == 1;
+            thôngTinTàiKhoảnToolStripMenuItem.Text += " (" + LoginAccount.FullName + ")"; 
+
+>>>>>>> 06a089719dd136d24e7a5620f09f9b4df7b1ef09
         }
 
         public void LoadTable()
@@ -165,7 +184,7 @@ namespace ProjectQLQuanCafe
 
         private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fAccount f = new fAccount();
+            fAccount f = new fAccount(LoginAccount);
             f.ShowDialog();
         }
 
@@ -184,7 +203,6 @@ namespace ProjectQLQuanCafe
         private void fQuanLyDatMon_Load(object sender, EventArgs e)
         {
         }
-        
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             Table table = lsvMonAn.Tag as Table;
@@ -236,6 +254,14 @@ namespace ProjectQLQuanCafe
             ShowOrder(table.ID);
 
             LoadTable();
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đăng suất không ?", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

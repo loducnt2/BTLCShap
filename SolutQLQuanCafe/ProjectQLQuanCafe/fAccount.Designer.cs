@@ -100,6 +100,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(472, 45);
             this.panel3.TabIndex = 0;
+//          this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // txtHoTen
             // 
@@ -306,6 +307,7 @@
             this.btnUpdate.TabIndex = 10;
             this.btnUpdate.Text = "Câp nhật";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExit
             // 
@@ -342,6 +344,7 @@
             this.Name = "fAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form";
+            this.Load += new System.EventHandler(this.fAccount_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);

@@ -10,7 +10,7 @@ namespace ProjectQLQuanCafe.DAL
 {
     public class DataProvider
     {
-        private string connString = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyQuanCafe;Integrated Security=True";
+        public string connString = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyQuanCafe;Integrated Security=True";
 
         public static object Instance { get; internal set; }
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjectQLQuanCafe.BLL;
+using ProjectQLQuanCafe.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +18,8 @@ namespace ProjectQLQuanCafe
         {
             InitializeComponent();
         }
+        
+        AccountDAL aDAL = new AccountDAL();
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -24,41 +28,44 @@ namespace ProjectQLQuanCafe
 
         private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            /*
+            
             if (MessageBox.Show("Bạn có muốn thoát chương trình?", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
             {
                 e.Cancel = true;
             }
-            */
+            
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            /*
-            if (txtTaiKhoan.Text=="" || txtMatKhau.Text=="")
+            
+            
+    
+            string username = txtTaiKhoan.Text;
+            string password = txtMatKhau.Text;
+            if(Login(username,password))
             {
-                MessageBox.Show("Tài khoản và mật khẩu là bắt buộc", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            } else if (txtTaiKhoan.Text == "admin" && txtMatKhau.Text == "123456")
-            {
-                MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                fTableManager fTableManager = new fTableManager();
+                Account loginAccount = aDAL.GetAccountByUserName(username);
+                fQuanLyDatMon fTableManager = new fQuanLyDatMon(loginAccount);
                 this.Hide();
                 fTableManager.ShowDialog();
                 this.Show();
-            } else
+            }
+            else if (txtTaiKhoan.Text == "" || txtMatKhau.Text == "")
+            {
+                MessageBox.Show("Tài khoản và mật khẩu là bắt buộc", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
             {
                 MessageBox.Show("Sai tài khoản hoặc mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            */
-            fQuanLyDatMon fTableManager = new fQuanLyDatMon();
-            this.Hide();
-            fTableManager.ShowDialog();
-            this.Show();
+
+
         }
 
-        private void fLogin_Load(object sender, EventArgs e)
+        bool Login(string username,string password)
         {
-
+            return aDAL.Login(username, password);
         }
     }
 }
