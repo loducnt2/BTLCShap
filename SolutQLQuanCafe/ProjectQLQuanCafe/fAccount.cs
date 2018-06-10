@@ -93,11 +93,27 @@ namespace ProjectQLQuanCafe
         }
         void UpdateAccount()
         {
-            
+            string fullName = txtHoTen.Text;
+            string address = txtDiaChi.Text;
+            string password = txtMatKhau.Text;
+            string newpass = txtMatKhauMoi.Text;
+            string reenterPass = txtXacNhanMatKhau.Text;
+            string userName = txtDangNhap.Text;
+
+            if(!newpass.Equals(reenterPass))
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu đúng với mật khẩu mới !");
+            }
+            else
+            {
+
+            }
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            UpdateAccount();
+            if (txtDangNhap.TextLength == 0)
+                MessageBox.Show("Tên đăng nhập không được bỏ trống");
+            
         }
     }
 }

@@ -28,32 +28,19 @@ namespace ProjectQLQuanCafe
 
         private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            /*
+            
             if (MessageBox.Show("Bạn có muốn thoát chương trình?", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
             {
                 e.Cancel = true;
             }
-            */
+            
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            /*
-            if (txtTaiKhoan.Text=="" || txtMatKhau.Text=="")
-            {
-                MessageBox.Show("Tài khoản và mật khẩu là bắt buộc", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            } else if (txtTaiKhoan.Text == "admin" && txtMatKhau.Text == "123456")
-            {
-                MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                fTableManager fTableManager = new fTableManager();
-                this.Hide();
-                fTableManager.ShowDialog();
-                this.Show();
-            } else
-            {
-                MessageBox.Show("Sai tài khoản hoặc mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            */
+            
+            
+    
             string username = txtTaiKhoan.Text;
             string password = txtMatKhau.Text;
             if(Login(username,password))
@@ -64,18 +51,21 @@ namespace ProjectQLQuanCafe
                 fTableManager.ShowDialog();
                 this.Show();
             }
+            else if (txtTaiKhoan.Text == "" || txtMatKhau.Text == "")
+            {
+                MessageBox.Show("Tài khoản và mật khẩu là bắt buộc", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
-            
+
         }
 
         bool Login(string username,string password)
         {
             return aDAL.Login(username, password);
-        }
-
-        private void fLogin_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

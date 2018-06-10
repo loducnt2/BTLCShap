@@ -31,7 +31,12 @@ namespace ProjectQLQuanCafe.DAL
             DataTable result = dtPro.ExecuteQuery(query);
             return result.Rows.Count > 0;
         }
-
+        //hop
+        public void UpdateAccount(string userName,string fullName,string pass,string newPass, string Address, int phone, Boolean gt)
+        {
+            string sql= "Update Account Set Fullname = N'"+fullName+ "', Password = '"+newPass+ "', Address = N'"+Address+ "', Phone ='"+phone+ "', Gender = '"+gt+ "' Where Username = '"+userName+ "' And Password = '"+pass+"'";
+            dtPro.UnGetTable(sql);
+        }
 
         public Account GetAccountByUserName(string userName)
         {
@@ -43,6 +48,9 @@ namespace ProjectQLQuanCafe.DAL
 
             return null;
         }
+
+        
+
 
         internal void GetAccountByUserName()
         {
